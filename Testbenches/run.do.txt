@@ -1,0 +1,20 @@
+# ==============================================================================
+# ModelSim / QuestaSim Simulation Automation Script
+# ==============================================================================
+
+# 1. Create the 'work' directory to store compiled design libraries
+vlib work
+
+# 2. Compile all Verilog source files listed inside 'sourcefile.txt'
+vlog -f sourcefile.txt
+
+# 3. Load the top-level testbench MODULE into the simulator
+# NOTE: Put the MODULE name here (e.g., UART_TOP_tb), NOT the file name (do NOT include .v)
+# '-voptargs=+accs' enables full signal visibility/debugging in the waveform window
+vsim -voptargs=+accs work.YOUR_TESTBENCH_MODULE_NAME
+
+# 4. Load signal formatting and visual layout into the Waveform window
+do YOUR_WAVE_SCRIPT.do
+
+# 5. Run the simulation continuously until $finish is executed in the testbench
+run -all

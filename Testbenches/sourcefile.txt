@@ -1,0 +1,12 @@
+// ==============================================================================
+// Compilation File List
+// ==============================================================================
+// List all RTL design files first, followed by the testbench file at the end.
+// Ensure each file path includes the .v or .sv extension.
+
+// --- Design Under Test (DUT) Files ---
+System_Controller.v
+// Add any sub-modules here (e.g., ALU.v, Register_File.v)
+
+// --- Testbench File ---
+System_Controller_tb.v
