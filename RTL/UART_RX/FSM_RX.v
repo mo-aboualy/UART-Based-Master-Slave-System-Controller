@@ -1,4 +1,4 @@
-module FSM (
+module FSM_RX (
     input        RX_IN,
     input        PAR_EN,
     input  [4:0] edge_count,
@@ -67,12 +67,12 @@ module FSM (
             end
             STOP: begin
                 if (edge_count == prescale - 1) begin
-                    if (RX_IN)
-                        next_state = IDLE;
+                    if (!RX_IN)
+                    next_state = START; // Back-to-back frame detected
                     else
-                        next_state = START;
+                    next_state = IDLE;  // Line is IDLE
                 end
-                else
+                    else
                     next_state = STOP;
             end
             default: next_state = IDLE;
@@ -92,7 +92,7 @@ module FSM (
         case (current_state)
             IDLE: begin
                 data_valid      = 0;
-                edge_bit_EN     = 0;
+                edge_bit_EN     = !RX_IN;
                 data_sample_EN  = 0;
                 deser_EN        = 0;
                 start_check_EN  = 0;

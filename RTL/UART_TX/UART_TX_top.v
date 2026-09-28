@@ -14,6 +14,14 @@ module UART_TX_top (
     wire       ser_data;
     wire [1:0] mux_sel;
 
+    // Hold the byte for the whole frame: the FIFO read pointer advances (R_inc)
+    // while the frame is still being serialized.
+    reg [7:0] P_data_reg;
+    always @(posedge clk, negedge rst) begin
+        if (!rst)                        P_data_reg <= 8'b0;
+        else if (Data_valid && !busy)    P_data_reg <= P_data;
+    end
+
     FSM U1 (
         .Data_valid (Data_valid),
         .PAR_EN     (PAR_EN),
@@ -33,7 +41,7 @@ module UART_TX_top (
     );
 
     Parity_Calculator U3 (
-        .P_data     (P_data),
+        .P_data     (P_data_reg),
         .PAR_type   (PAR_type),
         .Data_valid (Data_valid),
         .clk        (clk),
@@ -42,7 +50,7 @@ module UART_TX_top (
     );
 
     Serializer U4 (
-        .P_data   (P_data),
+        .P_data   (P_data_reg),
         .ser_en   (ser_en),
         .clk      (clk),
         .rst      (rst),

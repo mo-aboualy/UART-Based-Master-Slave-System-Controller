@@ -4,6 +4,8 @@ module Parity_Checker (
     input             PAR_TYPE,
     input       [7:0] P_DATA,
     input             in_start_state,
+    input       [5:0] prescale,
+    input       [4:0] edge_count,
     input             clk, rst,
     output reg        PAR_err
 );
@@ -14,7 +16,7 @@ module Parity_Checker (
         else begin
             if (in_start_state)
                 PAR_err <= 0;
-            else if (parity_check_EN)
+            else if (parity_check_EN && (edge_count >= (prescale >> 1) + 2))
                 PAR_err <= sampled_bit != ((^P_DATA) ^ PAR_TYPE);
         end
     end

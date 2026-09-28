@@ -6,31 +6,16 @@ module decoder (
     output reg       shift_en
 );
     always @(*) begin
+        arith_en = 0;
+        logic_en = 0;
+        cmp_en   = 0;
+        shift_en = 0;
         case (alu_fun)
-            2'b00: begin
-                arith_en = 1;
-                logic_en = 0;
-                cmp_en   = 0;
-                shift_en = 0;
-            end
-            2'b01: begin
-                arith_en = 0;
-                logic_en = 1;
-                cmp_en   = 0;
-                shift_en = 0;
-            end
-            2'b10: begin
-                arith_en = 0;
-                logic_en = 0;
-                cmp_en   = 1;
-                shift_en = 0;
-            end
-            2'b11: begin
-                arith_en = 0;
-                logic_en = 0;
-                cmp_en   = 0;
-                shift_en = 1;
-            end
+            2'b00: arith_en = 1;
+            2'b01: logic_en = 1;
+            2'b10: cmp_en   = 1;
+            2'b11: shift_en = 1;
+            default: ;
         endcase
     end
 endmodule

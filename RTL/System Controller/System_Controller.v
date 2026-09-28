@@ -164,7 +164,8 @@ module System_Controller #(
             end
 
             ALU_OUT_L: begin
-                CLK_en = 1'b1;
+                CLK_en   = 1'b1;
+                ALU_FUNC = store_func; // keep the function so the ALU output mux does not switch
                 if (!W_full) begin
                     WR_DATA_fifo = ALU_OUT[7:0]; // Slice lower byte of 16-bit ALU output
                     W_inc        = 1'b1;
@@ -172,7 +173,8 @@ module System_Controller #(
             end
 
             ALU_OUT_H: begin
-                CLK_en = 1'b1;
+                CLK_en   = 1'b1;
+                ALU_FUNC = store_func;
                 if (!W_full) begin
                     WR_DATA_fifo = ALU_OUT[15:8]; // Slice upper byte of 16-bit ALU output
                     W_inc        = 1'b1;

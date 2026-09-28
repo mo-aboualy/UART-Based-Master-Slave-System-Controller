@@ -1,32 +1,40 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 
-add wave -noupdate -divider {Clock & Reset}
-add wave -noupdate -color {Yellow} -radix binary /alu_signed_tb/clk_tb
-add wave -noupdate -color {Red}    -radix binary /alu_signed_tb/rst_tb
+# --- Clock & Reset ---
+add wave -noupdate -divider {Control & Clock}
+add wave -noupdate -format Logic -radix binary /alu_top_tb/clk
+add wave -noupdate -format Logic -radix binary /alu_top_tb/rst
 
-add wave -noupdate -divider {Control & Operand Inputs}
-add wave -noupdate -color {Cyan}   -radix binary  /alu_signed_tb/alu_fun_tb
-add wave -noupdate -color {Orange} -radix decimal /alu_signed_tb/a_tb
-add wave -noupdate -color {Orange} -radix decimal /alu_signed_tb/b_tb
+# --- Top Level Inputs ---
+add wave -noupdate -divider {DUT Inputs}
+add wave -noupdate -radix unsigned /alu_top_tb/a
+add wave -noupdate -radix unsigned /alu_top_tb/b
+add wave -noupdate -radix binary /alu_top_tb/alu_fun
 
-add wave -noupdate -divider {Arithmetic Stage}
-add wave -noupdate -color {Green}  -radix decimal /alu_signed_tb/arith_out_tb
-add wave -noupdate -color {White}  -radix binary  /alu_signed_tb/arith_flag_tb
+# --- Decoder Enables ---
+add wave -noupdate -divider {Enable Signals}
+add wave -noupdate -format Logic /alu_top_tb/uut/arith_en
+add wave -noupdate -format Logic /alu_top_tb/uut/logic_en
+add wave -noupdate -format Logic /alu_top_tb/uut/cmp_en
+add wave -noupdate -format Logic /alu_top_tb/uut/shift_en
 
-add wave -noupdate -divider {Logic Stage}
-add wave -noupdate -color {Green}  -radix hex     /alu_signed_tb/logic_out_tb
-add wave -noupdate -color {White}  -radix binary  /alu_signed_tb/logic_flag_tb
+# --- Internal Unit Outputs ---
+add wave -noupdate -divider {Sub-module Outputs}
+add wave -noupdate -radix unsigned /alu_top_tb/uut/arith_out
+add wave -noupdate -radix binary /alu_top_tb/uut/logic_out
+add wave -noupdate -radix unsigned /alu_top_tb/uut/cmp_out
+add wave -noupdate -radix binary /alu_top_tb/uut/shift_out
 
-add wave -noupdate -divider {Comparator Stage}
-add wave -noupdate -color {Green}  -radix unsigned /alu_signed_tb/cmp_out_tb
-add wave -noupdate -color {White}  -radix binary   /alu_signed_tb/cmp_flag_tb
+# --- Top Level Outputs ---
+add wave -noupdate -divider {DUT Outputs}
+add wave -noupdate -radix unsigned /alu_top_tb/ALU_OUT
+add wave -noupdate -format Logic /alu_top_tb/ALU_Valid
 
-add wave -noupdate -divider {Shifter Stage}
-add wave -noupdate -color {Green}  -radix hex     /alu_signed_tb/shift_out_tb
-add wave -noupdate -color {White}  -radix binary  /alu_signed_tb/shift_flag_tb
-
+# --- Wave Window Configurations ---
 TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 1
 configure wave -namecolwidth 220
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
@@ -39,6 +47,6 @@ configure wave -gridoffset 0
 configure wave -gridperiod 1
 configure wave -griddelta 40
 configure wave -timeline 0
-configure wave -timelineunits us
+configure wave -timelineunits ns
 update
-wave zoom full
+WaveRestoreZoom {0 ps} {220 ns}

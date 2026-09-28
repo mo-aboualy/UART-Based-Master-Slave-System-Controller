@@ -17,6 +17,8 @@ module UART_TOP (
     input  [5:0] prescale,
     input        RX_CLK,
     output       RX_data_valid,
+    output       PAR_err,
+    output       STOP_err,
     output [7:0] RX_P_DATA
 );
 
@@ -39,6 +41,8 @@ module UART_TOP (
         .clk        (RX_CLK),
         .rst        (rst),
         .data_valid (RX_data_valid),
+        .PAR_err    (PAR_err),
+        .STOP_err   (STOP_err),
         .P_DATA     (RX_P_DATA)
     );
 
