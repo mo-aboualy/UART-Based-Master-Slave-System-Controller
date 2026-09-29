@@ -1,0 +1,81 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : System_TOP_DFT
+Version: O-2018.06-SP1
+Date   : Wed Sep 30 04:40:33 2026
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: ALU/u1/arith_out_reg[8]
+              (rising edge-triggered flip-flop clocked by ALU_CLK)
+  Endpoint: ALU/u1/arith_out_reg[9]
+            (rising edge-triggered flip-flop clocked by ALU_CLK)
+  Path Group: ALU_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  System_TOP_DFT     tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ALU_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ALU/u1/arith_out_reg[8]/CK (SDFFRQX1M)                  0.00       0.00 r
+  ALU/u1/arith_out_reg[8]/Q (SDFFRQX1M)                   0.84       0.84 r
+  ALU/u1/arith_out_reg[9]/SI (SDFFRQX1M)                  0.00       0.84 r
+  data arrival time                                                  0.84
+
+  clock ALU_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  ALU/u1/arith_out_reg[9]/CK (SDFFRQX1M)                  0.00       0.10 r
+  library hold time                                      -0.28      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.01
+
+
+  Startpoint: Register_File/RD_Valid_reg
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: Register_File/reg_file_reg[0][0]
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  System_TOP_DFT     tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  Register_File/RD_Valid_reg/CK (SDFFRQX2M)               0.00       0.00 r
+  Register_File/RD_Valid_reg/Q (SDFFRQX2M)                0.69       0.69 r
+  Register_File/reg_file_reg[0][0]/SI (SDFFRHQX8M)        0.00       0.69 r
+  data arrival time                                                  0.69
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  Register_File/reg_file_reg[0][0]/CK (SDFFRHQX8M)        0.00       0.10 r
+  library hold time                                      -0.18      -0.08
+  data required time                                                -0.08
+  --------------------------------------------------------------------------
+  data required time                                                -0.08
+  data arrival time                                                 -0.69
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.77
+
+
+1
