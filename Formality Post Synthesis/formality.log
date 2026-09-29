@@ -1,0 +1,23 @@
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[7] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[6] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[5] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[4] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[3] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[2] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[1] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/remainder[0] is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW_div_uns_0/divide_by_0 is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW01_sub_0/CO is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW01_add_0/CO is undriven.
+Info:  Net Imp:/WORK/arithmetic_unit_DW01_add_1/CO is undriven.
+Info:  guide_transformation 80 (Line: 619)  Rejected transformation 80 because design 'cmp_unit' cannot be found.
+Info:  guide_transformation 80 (Line: 619) Retrying with unread processing enabled.
+Info:  guide_transformation 80 (Line: 619)  Rejected transformation 80 because design 'cmp_unit' cannot be found.
+Info:  SVF Operation 80 (Line: 619) - transformation_share.  Status: rejected
+
+Info:  guide_uniquify 90 (Line: 734)  Cannot find object "TX_Clock_Divider/U12" in design 'System_TOP'.
+Info:  SVF Operation 90 (Line: 734) - uniquify.  Status: rejected
+Info:  guide_uniquify 90 (Line: 734)  Cannot find object "RX_Clock_Divider/U12" in design 'System_TOP'.
+Info:  guide_uniquify 98 (Line: 775)  Cannot find object "ALU/u1/dp_cluster_0/mult_26" in design 'System_TOP'.
+Info:  Pre-verification of Ref:/WORK/arithmetic_unit_width8/div_30 SUCCEEDED.
+Info:  Pre-verification of Ref:/WORK/arithmetic_unit_width8/mult_26 SUCCEEDED.

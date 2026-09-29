@@ -1,0 +1,86 @@
+ 
+****************************************
+Report : area
+Design : System_TOP
+Version: O-2018.06-SP1
+Date   : Tue Sep 29 21:32:32 2026
+****************************************
+
+Library(s) Used:
+
+    scmetro_tsmc_cl013g_rvt_ss_1p08v_125c (File: /home/ICer/Final_System/std_cells/scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.db)
+
+Number of ports:                          919
+Number of nets:                          3224
+Number of cells:                         2282
+Number of combinational cells:           1857
+Number of sequential cells:               382
+Number of macros/black boxes:               0
+Number of buf/inv:                        410
+Number of references:                      16
+
+Combinational area:              16290.234984
+Buf/Inv area:                     2171.011527
+Noncombinational area:            9390.065866
+Macro/Black Box area:                0.000000
+Net Interconnect area:          811304.025635
+
+Total cell area:                 25680.300850
+Total area:                     836984.326485
+
+Hierarchical area distribution
+------------------------------
+
+                                  Global cell area            Local cell area
+                                  -------------------  ----------------------------- 
+Hierarchical cell                 Absolute    Percent  Combi-      Noncombi-  Black-
+                                  Total       Total    national    national   boxes   Design
+--------------------------------  ----------  -------  ----------  ---------  ------  ----------------------------
+System_TOP                        25680.3009    100.0     31.7709     0.0000  0.0000  System_TOP
+ALU                                7634.4296     29.7    256.5206     0.0000  0.0000  alu_top
+ALU/u0                               47.0680      0.2     47.0680     0.0000  0.0000  decoder
+ALU/u1                             5902.3272     23.0    360.0702   440.0858  0.0000  arithmetic_unit
+ALU/u1/add_18                       252.9905      1.0    252.9905     0.0000  0.0000  arithmetic_unit_DW01_add_0
+ALU/u1/div_30                      2312.2155      9.0   2312.2155     0.0000  0.0000  arithmetic_unit_DW_div_uns_0
+ALU/u1/mult_26                     2255.7339      8.8   1973.3259     0.0000  0.0000  arithmetic_unit_DW02_mult_0
+ALU/u1/mult_26/FS_1                 282.4080      1.1    282.4080     0.0000  0.0000  arithmetic_unit_DW01_add_1
+ALU/u1/sub_22                       281.2313      1.1    281.2313     0.0000  0.0000  arithmetic_unit_DW01_sub_0
+ALU/u2                              569.5228      2.2    336.5362   232.9866  0.0000  logic_unit
+ALU/u3                              365.9537      1.4    288.2915    77.6622  0.0000  cmp_unit
+ALU/u4                              493.0373      1.9    234.1633   258.8740  0.0000  shift_unit
+Clock_Gating                         40.0078      0.2      0.0000    40.0078  0.0000  Clock_Gating
+Data_Synchronizer                   576.5830      2.2    105.9030   470.6800  0.0000  Data_Sync
+Domain_1_Reset                       51.7748      0.2      0.0000    51.7748  0.0000  Reset_SYNC_0
+Domain_2_Reset                       51.7748      0.2      0.0000    51.7748  0.0000  Reset_SYNC_1
+Prescale_MUX                        170.6215      0.7    170.6215     0.0000  0.0000  Prescale_MUX
+Pulse_Generator                      57.6583      0.2      5.8835    51.7748  0.0000  Pulse_Generator
+RX_Clock_Divider                    884.8784      3.4    542.4587   235.3400  0.0000  Clock_Divider_0
+RX_Clock_Divider/add_24             107.0797      0.4    107.0797     0.0000  0.0000  Clock_Divider_0_DW01_inc_0
+Register_File                      6437.7257     25.1   2741.7111  3696.0147  0.0000  register_file
+SYS_CTRL                           1257.8923      4.9    939.0066   318.8857  0.0000  System_Controller
+TX_Clock_Divider                    878.9949      3.4    536.5752   235.3400  0.0000  Clock_Divider_1
+TX_Clock_Divider/add_24             107.0797      0.4    107.0797     0.0000  0.0000  Clock_Divider_1_DW01_inc_0
+TX_FIFO                            3551.2806     13.8     14.1204     0.0000  0.0000  ASYC_FIFO
+TX_FIFO/U0                         2529.9050      9.9   1174.3466  1355.5583  0.0000  FIFO_MEM_CONTROL
+TX_FIFO/U1                          289.4682      1.1    170.6215   118.8467  0.0000  FIFO_WR
+TX_FIFO/U2                          287.1148      1.1    177.6817   109.4331  0.0000  FIFO_RD
+TX_FIFO/U3_FIFO_WR                  215.3361      0.8      8.2369   207.0992  0.0000  DF_SYNC_0
+TX_FIFO/U4_FIFO_RD                  215.3361      0.8      8.2369   207.0992  0.0000  DF_SYNC_1
+UART                               4054.9082     15.8     11.7670     0.0000  0.0000  UART_TOP
+UART/RX_INST                       3153.5560     12.3     16.4738     0.0000  0.0000  UART_RX_top
+UART/RX_INST/U0                     478.9169      1.9    398.9013    80.0156  0.0000  FSM_RX
+UART/RX_INST/U1                     670.7190      2.6    435.3790   235.3400  0.0000  Edge_Bit_Counter
+UART/RX_INST/U2                     809.5696      3.2    680.1326   129.4370  0.0000  Data_Sampler
+UART/RX_INST/U3                     502.4509      2.0    217.6895   284.7614  0.0000  Deserializer
+UART/RX_INST/U4                     216.5128      0.8    190.6254    25.8874  0.0000  Start_Checker
+UART/RX_INST/U5                     278.8779      1.1    251.8138    27.0641  0.0000  Parity_Checker
+UART/RX_INST/U6                     180.0351      0.7    152.9710    27.0641  0.0000  Stop_Checker
+UART/TX_INST                        889.5852      3.5    101.1962   207.0992  0.0000  UART_TX_top
+UART/TX_INST/U1                     182.3885      0.7    100.0195    82.3690  0.0000  FSM
+UART/TX_INST/U2                      12.9437      0.1     12.9437     0.0000  0.0000  MUX
+UART/TX_INST/U3                     124.7302      0.5     98.8428    25.8874  0.0000  Parity_Calculator
+UART/TX_INST/U4                     261.2274      1.0    155.3244   105.9030  0.0000  Serializer
+--------------------------------  ----------  -------  ----------  ---------  ------  ----------------------------
+Total                                                  16290.2350  9390.0659  0.0000
+
+1
