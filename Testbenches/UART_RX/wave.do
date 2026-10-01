@@ -1,24 +1,55 @@
 onerror {resume}
 quietly WaveActivateNextPane {} 0
 
-add wave -noupdate -divider {Clock & Reset}
-add wave -noupdate -color {Yellow} -radix binary   /UART_RX_tb/clk_tb
-add wave -noupdate -color {Red}    -radix binary   /UART_RX_tb/rst_tb
+# -----------------------------------------------------------------------------
+# Global & Configuration Signals
+# -----------------------------------------------------------------------------
+add wave -noupdate -divider -height 22 {Global & Configuration}
+add wave -noupdate -format Logic -radix binary        /tb_UART_RX_top/clk
+add wave -noupdate -format Logic -radix binary        /tb_UART_RX_top/rst
+add wave -noupdate -format Literal -radix unsigned    /tb_UART_RX_top/prescale
+add wave -noupdate -format Logic -radix binary        /tb_UART_RX_top/PAR_EN
+add wave -noupdate -format Logic -radix binary        /tb_UART_RX_top/PAR_TYPE
 
-add wave -noupdate -divider {Frame Configuration}
-add wave -noupdate -color {Cyan}   -radix unsigned /UART_RX_tb/prescale_tb
-add wave -noupdate -color {Cyan}   -radix binary   /UART_RX_tb/PAR_EN_tb
-add wave -noupdate -color {Cyan}   -radix binary   /UART_RX_tb/PAR_TYPE_tb
+# -----------------------------------------------------------------------------
+# Serial Input Line
+# -----------------------------------------------------------------------------
+add wave -noupdate -divider -height 22 {Serial Interface}
+add wave -noupdate -format Logic -color Yellow -radix binary /tb_UART_RX_top/RX_IN
 
-add wave -noupdate -divider {Serial Input Line}
-add wave -noupdate -color {Orange} -radix binary   /UART_RX_tb/RX_IN_tb
+# -----------------------------------------------------------------------------
+# Top Level Outputs
+# -----------------------------------------------------------------------------
+add wave -noupdate -divider -height 22 {Receiver Outputs}
+add wave -noupdate -format Logic -color Green -radix binary  /tb_UART_RX_top/data_valid
+add wave -noupdate -format Literal -color Cyan -radix hex    /tb_UART_RX_top/P_DATA
+add wave -noupdate -format Logic -color Red -radix binary    /tb_UART_RX_top/PAR_err
+add wave -noupdate -format Logic -color Red -radix binary    /tb_UART_RX_top/STOP_err
 
-add wave -noupdate -divider {Parallel Output Interface}
-add wave -noupdate -color {Magenta}-radix binary   /UART_RX_tb/data_valid_tb
-add wave -noupdate -color {Green}  -radix hex      /UART_RX_tb/P_DATA_tb
+# -----------------------------------------------------------------------------
+# FSM State & Counters
+# -----------------------------------------------------------------------------
+add wave -noupdate -divider -height 22 {FSM & Counters}
+add wave -noupdate -format Literal -color Magenta -radix unsigned /tb_UART_RX_top/DUT/U0/current_state
+add wave -noupdate -format Literal -radix unsigned                /tb_UART_RX_top/DUT/U1/edge_count
+add wave -noupdate -format Literal -radix unsigned                /tb_UART_RX_top/DUT/U1/bit_count
 
+# -----------------------------------------------------------------------------
+# Sub-module Internal Sampling & Error Flags
+# -----------------------------------------------------------------------------
+add wave -noupdate -divider -height 22 {Internal Control & Checkers}
+add wave -noupdate -format Logic -radix binary /tb_UART_RX_top/DUT/data_sample_EN
+add wave -noupdate -format Logic -radix binary /tb_UART_RX_top/DUT/sampled_bit
+add wave -noupdate -format Logic -radix binary /tb_UART_RX_top/DUT/deser_EN
+add wave -noupdate -format Logic -color Red -radix binary /tb_UART_RX_top/DUT/START_err
+
+# -----------------------------------------------------------------------------
+# Waveform Formatting & Zoom Configuration
+# -----------------------------------------------------------------------------
 TreeUpdate [SetDefaultTree]
-configure wave -namecolwidth 200
+WaveRestoreCursors {{Cursor 1} {0 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 220
 configure wave -valuecolwidth 100
 configure wave -justifyvalue left
 configure wave -signalnamewidth 1
@@ -27,9 +58,9 @@ configure wave -datasetprefix 0
 configure wave -rowmargin 4
 configure wave -childrowmargin 2
 configure wave -gridoffset 0
-configure wave -gridperiod 1
-configure wave -griddelta 40
+configure wave -gridperiod 1ns
+configure wave -griddelta 4
 configure wave -timeline 0
 configure wave -timelineunits ns
 update
-wave zoom full
+WaveRestoreZoom {0 ps} {3000 ns}

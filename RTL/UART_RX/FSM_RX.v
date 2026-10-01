@@ -80,7 +80,6 @@ module FSM_RX (
     end
 
     always @(*) begin
-        data_valid      = 0;
         edge_bit_EN     = 0;
         data_sample_EN  = 0;
         deser_EN        = 0;
@@ -89,9 +88,9 @@ module FSM_RX (
         stop_check_EN   = 0;
         in_data_state   = 0;
         in_start_state  = 0;
+        
         case (current_state)
             IDLE: begin
-                data_valid      = 0;
                 edge_bit_EN     = !RX_IN;
                 data_sample_EN  = 0;
                 deser_EN        = 0;
@@ -123,10 +122,8 @@ module FSM_RX (
                 edge_bit_EN    = 1;
                 data_sample_EN = 1;
                 stop_check_EN  = 1;
-                data_valid     = !PAR_err && !STOP_err && (edge_count == prescale - 1);
             end
             default: begin
-                data_valid      = 0;
                 edge_bit_EN     = 0;
                 data_sample_EN  = 0;
                 deser_EN        = 0;
@@ -137,6 +134,23 @@ module FSM_RX (
                 in_data_state   = 0;
             end
         endcase
+    end
+
+    // -------------------------------------------------------------------------
+    // 4. Glitch-Free Registered CDC Output for data_valid
+    // -------------------------------------------------------------------------
+    always @(posedge clk or negedge rst) begin
+        if (!rst) begin
+            data_valid <= 1'b0;
+        end else begin
+            if ((current_state == STOP) && 
+                (edge_count == prescale - 1) && 
+                !PAR_err && !STOP_err) begin
+                data_valid <= 1'b1;
+            end else begin
+                data_valid <= 1'b0;
+            end
+        end
     end
 
 endmodule

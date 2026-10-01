@@ -1,0 +1,78 @@
+#!SPYGLASS_PROJECT_FILE
+#!VERSION 3.0
+#  -------------------------------------------------------------------
+#  This is a software generated project file. Manual edits to this file could be lost during the next save operation
+#  Copyright Synopsys Inc.
+#  Last Updated By: SpyGlass SpyGlass_vL-2016.06
+#  Last Updated On Thu Oct  1 22:56:55 2026
+#
+#  -------------------------------------------------------------------
+
+##Data Import Section
+
+read_file -type sgdc Final_System.sgdc
+read_file -type verilog ../../RTL/alu_top.v
+read_file -type verilog ../../RTL/arithmetic_unit.v
+read_file -type verilog ../../RTL/ASYC_FIFO.v
+read_file -type verilog ../../RTL/Clock_Divider.v
+read_file -type verilog ../../RTL/Clock_Gating.v
+read_file -type verilog ../../RTL/cmp_unit.v
+read_file -type verilog ../../RTL/Data_Sampler.v
+read_file -type verilog ../../RTL/Data_Sync.v
+read_file -type verilog ../../RTL/decoder.v
+read_file -type verilog ../../RTL/Deserializer.v
+read_file -type verilog ../../RTL/DF_SYNC.v
+read_file -type verilog ../../RTL/Edge_Bit_Counter.v
+read_file -type verilog ../../RTL/FIFO_MEM_CONTROL.v
+read_file -type verilog ../../RTL/FIFO_RD.v
+read_file -type verilog ../../RTL/FIFO_WR.v
+read_file -type verilog ../../RTL/FSM.v
+read_file -type verilog ../../RTL/FSM_RX.v
+read_file -type verilog ../../RTL/logic_unit.v
+read_file -type verilog ../../RTL/MUX.v
+read_file -type verilog ../../RTL/Parity_Calculator.v
+read_file -type verilog ../../RTL/Parity_Checker.v
+read_file -type verilog ../../RTL/Prescale_MUX.v
+read_file -type verilog ../../RTL/Pulse_Generator.v
+read_file -type verilog ../../RTL/register_file.v
+read_file -type verilog ../../RTL/Reset_SYNC.v
+read_file -type verilog ../../RTL/Serializer.v
+read_file -type verilog ../../RTL/shift_unit.v
+read_file -type verilog ../../RTL/Start_Checker.v
+read_file -type verilog ../../RTL/Stop_Checker.v
+read_file -type verilog ../../RTL/System_Controller.v
+read_file -type verilog ../../RTL/System_TOP.v
+read_file -type verilog ../../RTL/UART_RX_top.v
+read_file -type verilog ../../RTL/UART_TOP.v
+read_file -type verilog ../../RTL/UART_TX_top.v
+read_file -type gateslib ../../std_cells/scmetro_tsmc_cl013g_rvt_tt_1p2v_25c.lib
+
+##Common Options Section
+
+set_option projectwdir .
+set_option language_mode mixed
+set_option designread_enable_synthesis yes
+set_option designread_disable_flatten no
+set_option sdc2sgdc yes
+set_option active_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+##Goal Setup Section
+
+current_methodology $SPYGLASS_HOME/GuideWare/latest/block/rtl_handoff
+
+
+current_goal cdc/clock_reset_integrity -alltop
+read_file -type awl ./spyglass-1/cdc/clock_reset_integrity/spyglass-1_waiver_file.awl
+set_goal_option default_waiver_file ./spyglass-1/cdc/clock_reset_integrity/spyglass-1_waiver_file.awl
+
+
+current_goal cdc/cdc_verify_struct -alltop
+read_file -type awl ./spyglass-1/cdc/cdc_verify_struct/spyglass-1_waiver_file.awl
+set_goal_option default_waiver_file ./spyglass-1/cdc/cdc_verify_struct/spyglass-1_waiver_file.awl
+
+
+current_goal cdc/cdc_verify -alltop
+read_file -type awl ./spyglass-1/cdc/cdc_verify/spyglass-1_waiver_file.awl
+set_goal_option default_waiver_file ./spyglass-1/cdc/cdc_verify/spyglass-1_waiver_file.awl
+
