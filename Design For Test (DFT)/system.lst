@@ -2,7 +2,7 @@
 /home/ICer/Final_System/RTL/arithmetic_unit.v
 /home/ICer/Final_System/RTL/ASYC_FIFO.v
 /home/ICer/Final_System/RTL/Clock_Divider.v
-/home/ICer/Final_System/DFT/Clock_Gating.v
+/home/ICer/Final_System/RTL/Clock_Gating.v
 /home/ICer/Final_System/RTL/cmp_unit.v
 /home/ICer/Final_System/RTL/Data_Sampler.v
 /home/ICer/Final_System/RTL/Data_Sync.v
@@ -29,7 +29,7 @@
 /home/ICer/Final_System/RTL/Start_Checker.v
 /home/ICer/Final_System/RTL/Stop_Checker.v
 /home/ICer/Final_System/RTL/System_Controller.v
-/home/ICer/Final_System/DFT/System_TOP_DFT.v
+/home/ICer/Final_System/DFT/SYS_TOP.v
 /home/ICer/Final_System/RTL/UART_RX_top.v
 /home/ICer/Final_System/RTL/UART_TOP.v
 /home/ICer/Final_System/RTL/UART_TX_top.v

@@ -1,0 +1,967 @@
+######################################################
+#                                                    #
+#  Cadence Design Systems                            #
+#  FirstEncounter Floor Plan Information             #
+#                                                    #
+######################################################
+# Created by First Encounter v08.10-p004_1 on Tue Oct  6 18:00:58 2026
+
+Version: 8
+
+Head Box: 0.0000 0.0000 240.4700 160.4700
+IO Box: 0.0000 0.0000 240.4700 160.4700
+Core Box: 6.1500 6.1500 234.4700 154.4700
+UseStdUtil: false
+
+######################################################
+#  DesignRoutingHalo: <space> <bottomLayerName> <topLayerName>
+######################################################
+
+######################################################
+#  Core Rows Parameters:                             #
+######################################################
+Row Spacing = 0.000000
+Row SpacingType = 2
+Row Flip = 2
+Core Row Site: TSM130NMMETROSITE 
+
+##############################################################################
+#  DefRow: <name> <site> <x> <y> <orient> <num_x> <num_y> <step_x> <step_y>  #
+##############################################################################
+DefRow: ROW_0 TSM130NMMETROSITE 6.1500 6.1500 FS 556 1 0.4100 0.0000
+DefRow: ROW_1 TSM130NMMETROSITE 6.1500 9.0200 N 556 1 0.4100 0.0000
+DefRow: ROW_2 TSM130NMMETROSITE 6.1500 11.8900 FS 556 1 0.4100 0.0000
+DefRow: ROW_3 TSM130NMMETROSITE 6.1500 14.7600 N 556 1 0.4100 0.0000
+DefRow: ROW_4 TSM130NMMETROSITE 6.1500 17.6300 FS 556 1 0.4100 0.0000
+DefRow: ROW_5 TSM130NMMETROSITE 6.1500 20.5000 N 556 1 0.4100 0.0000
+DefRow: ROW_6 TSM130NMMETROSITE 6.1500 23.3700 FS 556 1 0.4100 0.0000
+DefRow: ROW_7 TSM130NMMETROSITE 6.1500 26.2400 N 556 1 0.4100 0.0000
+DefRow: ROW_8 TSM130NMMETROSITE 6.1500 29.1100 FS 556 1 0.4100 0.0000
+DefRow: ROW_9 TSM130NMMETROSITE 6.1500 31.9800 N 556 1 0.4100 0.0000
+DefRow: ROW_10 TSM130NMMETROSITE 6.1500 34.8500 FS 556 1 0.4100 0.0000
+DefRow: ROW_11 TSM130NMMETROSITE 6.1500 37.7200 N 556 1 0.4100 0.0000
+DefRow: ROW_12 TSM130NMMETROSITE 6.1500 40.5900 FS 556 1 0.4100 0.0000
+DefRow: ROW_13 TSM130NMMETROSITE 6.1500 43.4600 N 556 1 0.4100 0.0000
+DefRow: ROW_14 TSM130NMMETROSITE 6.1500 46.3300 FS 556 1 0.4100 0.0000
+DefRow: ROW_15 TSM130NMMETROSITE 6.1500 49.2000 N 556 1 0.4100 0.0000
+DefRow: ROW_16 TSM130NMMETROSITE 6.1500 52.0700 FS 556 1 0.4100 0.0000
+DefRow: ROW_17 TSM130NMMETROSITE 6.1500 54.9400 N 556 1 0.4100 0.0000
+DefRow: ROW_18 TSM130NMMETROSITE 6.1500 57.8100 FS 556 1 0.4100 0.0000
+DefRow: ROW_19 TSM130NMMETROSITE 6.1500 60.6800 N 556 1 0.4100 0.0000
+DefRow: ROW_20 TSM130NMMETROSITE 6.1500 63.5500 FS 556 1 0.4100 0.0000
+DefRow: ROW_21 TSM130NMMETROSITE 6.1500 66.4200 N 556 1 0.4100 0.0000
+DefRow: ROW_22 TSM130NMMETROSITE 6.1500 69.2900 FS 556 1 0.4100 0.0000
+DefRow: ROW_23 TSM130NMMETROSITE 6.1500 72.1600 N 556 1 0.4100 0.0000
+DefRow: ROW_24 TSM130NMMETROSITE 6.1500 75.0300 FS 556 1 0.4100 0.0000
+DefRow: ROW_25 TSM130NMMETROSITE 6.1500 77.9000 N 556 1 0.4100 0.0000
+DefRow: ROW_26 TSM130NMMETROSITE 6.1500 80.7700 FS 556 1 0.4100 0.0000
+DefRow: ROW_27 TSM130NMMETROSITE 6.1500 83.6400 N 556 1 0.4100 0.0000
+DefRow: ROW_28 TSM130NMMETROSITE 6.1500 86.5100 FS 556 1 0.4100 0.0000
+DefRow: ROW_29 TSM130NMMETROSITE 6.1500 89.3800 N 556 1 0.4100 0.0000
+DefRow: ROW_30 TSM130NMMETROSITE 6.1500 92.2500 FS 556 1 0.4100 0.0000
+DefRow: ROW_31 TSM130NMMETROSITE 6.1500 95.1200 N 556 1 0.4100 0.0000
+DefRow: ROW_32 TSM130NMMETROSITE 6.1500 97.9900 FS 556 1 0.4100 0.0000
+DefRow: ROW_33 TSM130NMMETROSITE 6.1500 100.8600 N 556 1 0.4100 0.0000
+DefRow: ROW_34 TSM130NMMETROSITE 6.1500 103.7300 FS 556 1 0.4100 0.0000
+DefRow: ROW_35 TSM130NMMETROSITE 6.1500 106.6000 N 556 1 0.4100 0.0000
+DefRow: ROW_36 TSM130NMMETROSITE 6.1500 109.4700 FS 556 1 0.4100 0.0000
+DefRow: ROW_37 TSM130NMMETROSITE 6.1500 112.3400 N 556 1 0.4100 0.0000
+DefRow: ROW_38 TSM130NMMETROSITE 6.1500 115.2100 FS 556 1 0.4100 0.0000
+DefRow: ROW_39 TSM130NMMETROSITE 6.1500 118.0800 N 556 1 0.4100 0.0000
+DefRow: ROW_40 TSM130NMMETROSITE 6.1500 120.9500 FS 556 1 0.4100 0.0000
+DefRow: ROW_41 TSM130NMMETROSITE 6.1500 123.8200 N 556 1 0.4100 0.0000
+DefRow: ROW_42 TSM130NMMETROSITE 6.1500 126.6900 FS 556 1 0.4100 0.0000
+DefRow: ROW_43 TSM130NMMETROSITE 6.1500 129.5600 N 556 1 0.4100 0.0000
+DefRow: ROW_44 TSM130NMMETROSITE 6.1500 132.4300 FS 556 1 0.4100 0.0000
+DefRow: ROW_45 TSM130NMMETROSITE 6.1500 135.3000 N 556 1 0.4100 0.0000
+DefRow: ROW_46 TSM130NMMETROSITE 6.1500 138.1700 FS 556 1 0.4100 0.0000
+DefRow: ROW_47 TSM130NMMETROSITE 6.1500 141.0400 N 556 1 0.4100 0.0000
+DefRow: ROW_48 TSM130NMMETROSITE 6.1500 143.9100 FS 556 1 0.4100 0.0000
+DefRow: ROW_49 TSM130NMMETROSITE 6.1500 146.7800 N 556 1 0.4100 0.0000
+DefRow: ROW_50 TSM130NMMETROSITE 6.1500 149.6500 FS 556 1 0.4100 0.0000
+
+######################################################
+#  Track: dir start number space layer_num layer1 ...#
+######################################################
+Track: X 0.2050 587 0.4100 1 7
+Track: Y 0.6150 195 0.8200 1 7
+Track: Y 0.2050 391 0.4100 1 6
+Track: X 0.2050 587 0.4100 1 6
+Track: X 0.2050 587 0.4100 1 5
+Track: Y 0.2050 391 0.4100 1 5
+Track: Y 0.2050 391 0.4100 1 4
+Track: X 0.2050 587 0.4100 1 4
+Track: X 0.2050 587 0.4100 1 3
+Track: Y 0.2050 391 0.4100 1 3
+Track: Y 0.2050 391 0.4100 1 2
+Track: X 0.2050 587 0.4100 1 2
+Track: X 0.2050 587 0.4100 1 1
+Track: Y 0.2050 391 0.4100 1 1
+
+######################################################
+#  GCellGrid: dir start number space                 #
+######################################################
+GCellGrid: Y 160.4750 1 6.7250
+GCellGrid: Y 12.3000 24 6.1500
+GCellGrid: Y -0.0050 2 6.1550
+GCellGrid: X 240.6750 1 6.9750
+GCellGrid: X 12.3000 37 6.1500
+GCellGrid: X -0.1050 2 6.2550
+
+######################################################
+#  SpareCell: cellName                               #
+#  SpareInst: instName                               #
+######################################################
+
+######################################################
+#  ScanGroup: groupName startPin stopPin             #
+######################################################
+
+######################################################
+#  JtagCell:  leafCellName                           #
+#  JtagInst:  <instName | HInstName>                 #
+######################################################
+
+######################################################################################
+#  BlackBox: -cell <cell_name> { -size <x> <y> |  -area <um^2> | \                  #
+#            -gatecount <count> <areapergate> <utilization> | \                     #
+#            {-gateArea <gateAreaValue> [-macroArea <macroAreaValue>]} } \          #
+#            [-minwidth <w> | -minheight <h> | -fixedwidh <w> | -fixedheight <h>] \ #
+#            [-aspectratio <ratio>]                                                  #
+#            [-boxList <nrConstraintBox>                                             #
+#              ConstraintBox: <llx> <lly> <urx> <ury>                                #
+#              ... ]                                                                 #
+######################################################################################
+
+#########################################################
+#  PhysicalNet: <name> [-pwr|-gnd|-tiehi|-tielo]        #
+#########################################################
+PhysicalNet: VDD -pwr
+PhysicalNet: VSS -gnd
+
+#########################################################
+#  PhysicalInstance: <name> <cell> <orient> <llx> <lly> #
+#########################################################
+
+#####################################################################
+#  Group: <group_name> <nrHinst> [-isPhyHier]                       #
+#    <inst_name>                                                    #
+#    ...                                                            #
+#####################################################################
+
+#####################################################################
+#  Fence:  <name> <llx> <lly> <urx> <ury> <nrConstraintBox>         #
+#    ConstraintBox: <llx> <lly> <urx> <ury>                         #
+#    ...                                                            #
+#  Region: <name> <llx> <lly> <urx> <ury> <nrConstraintBox>         #
+#    ConstraintBox: <llx> <lly> <urx> <ury>                         #
+#    ...                                                            #
+#  Guide:  <name> <llx> <lly> <urx> <ury> <nrConstraintBox>         #
+#    ConstraintBox: <llx> <lly> <urx> <ury>                         #
+#    ...                                                            #
+#  SoftGuide: <name>                                                #
+#    ...                                                            #
+#####################################################################
+
+###########################################################################
+#  <HierarchicalPartitions>                                               #
+#     <NetGroup name="group_name" nets=val spacing=val isOptOrder=val isAltLayer=val > #
+#         <Net name="net_name" /> ...                                     #
+#     </NetGroup>                                                         #
+#     <Partition name="ptn_name"  hinst="name"                            #
+#         coreToLeft=fval coreToRight=fval coreToTop=fval coreToBottom=fval   #
+#         pinSpacingNorth=val pinSpacingWest=val pinSpacingSouth=val      #
+#         pinSpacingEast=val  blockedLayers=xval >       #
+#         <TrackHalfPitch Horizontal=val Vertical=val />                  #
+#         <SpacingHalo left=10.0 right=11.0 top=11.0 bottom=11.0 />       #
+#         <Clone hinst="hinst_name" orient=R0|R90|... />                  #
+#         <PinLayer side="N|W|S|E" Metal1=yes Metal2=yes ... />           #
+#         <RowSize cellHeight=1.0 railWidth=1.0 />                        #
+#         <RoutingHalo sideSize=11.0 bottomLayer=M1 topLayer=M2  />       #
+#         <SpacingHalo left=11.0 right=11.0 top=11.0 bottom=11.0 />       #
+#     </Partition>                                                        #
+#     <CellPinGroup name="group_name" cell="cell_name"                    #
+#                       pins=nr spacing=val isOptOrder=1 isAltLayer=1 >   #
+#         <GroupFTerm name="term_name" /> ...                             #
+#     </CellPinGroup>                                                     #
+#     <PartitionPinBlockage layerMap=x llx=1 lly=2 urx=3 ury=4 name="n" />#
+#     <PinGuide name="name" boxes=num cell="name" >                       #
+#        <Box llx=11.0 lly=22.0 urx=33.0 ury=44.0 layer=id /> ...         #
+#     </PinGuide>                                                         #
+#     <CellPtnCut name="name" cuts=Num >                                  #
+#        <Box llx=11.0 lly=22.0 urx=33.0 ury=44.0 /> ...                  #
+#     </CellPtnCut>                                                       #
+#  </HierarchicalPartitions>                                              #
+###########################################################################
+<HierarchicalPartitions>
+</HierarchicalPartitions>
+
+######################################################
+#  Instance: <name> <orient> <llx> <lly>             #
+######################################################
+Instance: REF_CLK__L2_I0 R0 30.7500 49.2000
+Instance: REF_CLK__L1_I0 MX 10.2500 46.3300
+Instance: UART_CLK__L2_I0 MX 24.1900 52.0700
+Instance: UART_CLK__L1_I0 R0 33.6200 54.9400
+Instance: scan_clk__L13_I0 R0 63.1400 77.9000
+Instance: scan_clk__L12_I0 R0 70.1100 77.9000
+Instance: scan_clk__L11_I0 R0 78.7200 77.9000
+Instance: scan_clk__L10_I0 MX 22.1400 57.8100
+Instance: scan_clk__L9_I0 R0 18.0400 60.6800
+Instance: scan_clk__L8_I0 MX 15.1700 57.8100
+Instance: scan_clk__L7_I0 R0 32.8000 100.8600
+Instance: scan_clk__L6_I0 MX 27.4700 138.1700
+Instance: scan_clk__L5_I0 MX 33.2100 29.1100
+Instance: scan_clk__L4_I0 R0 18.8600 14.7600
+Instance: scan_clk__L3_I0 MX 10.2500 29.1100
+Instance: scan_clk__L2_I0 R0 48.7900 60.6800
+Instance: scan_clk__L1_I0 MX 6.1500 86.5100
+Instance: REF_CLK_M__L8_I13 R0 95.5300 14.7600
+Instance: REF_CLK_M__L8_I12 MX 102.5000 75.0300
+Instance: REF_CLK_M__L8_I11 R0 100.0400 54.9400
+Instance: REF_CLK_M__L8_I10 MX 59.4500 126.6900
+Instance: REF_CLK_M__L8_I9 R0 52.0700 135.3000
+Instance: REF_CLK_M__L8_I8 MX 105.3700 132.4300
+Instance: REF_CLK_M__L8_I7 MX 88.1500 92.2500
+Instance: REF_CLK_M__L8_I6 R0 150.0600 72.1600
+Instance: REF_CLK_M__L8_I5 MX 148.8300 132.4300
+Instance: REF_CLK_M__L8_I4 MX 112.7500 109.4700
+Instance: REF_CLK_M__L8_I3 R0 217.7100 100.8600
+Instance: REF_CLK_M__L8_I2 R0 179.9900 95.1200
+Instance: REF_CLK_M__L8_I1 R0 209.1000 135.3000
+Instance: REF_CLK_M__L8_I0 R0 186.9600 112.3400
+Instance: REF_CLK_M__L7_I7 MX 100.8600 17.6300
+Instance: REF_CLK_M__L7_I6 MX 71.7500 75.0300
+Instance: REF_CLK_M__L7_I5 R0 72.1600 123.8200
+Instance: REF_CLK_M__L7_I4 MX 89.3800 109.4700
+Instance: REF_CLK_M__L7_I3 R0 157.0300 72.1600
+Instance: REF_CLK_M__L7_I2 R0 127.5100 123.8200
+Instance: REF_CLK_M__L7_I1 R0 209.1000 95.1200
+Instance: REF_CLK_M__L7_I0 R0 202.9500 123.8200
+Instance: REF_CLK_M__L6_I3 R0 81.5900 43.4600
+Instance: REF_CLK_M__L6_I2 R0 89.3800 123.8200
+Instance: REF_CLK_M__L6_I1 R0 123.0000 95.1200
+Instance: REF_CLK_M__L6_I0 MX 204.1800 109.4700
+Instance: REF_CLK_M__L5_I1 MX 97.1700 80.7700
+Instance: REF_CLK_M__L5_I0 MX 162.7700 103.7300
+Instance: REF_CLK_M__L4_I0 R0 122.5900 89.3800
+Instance: REF_CLK_M__L3_I1 R0 26.6500 54.9400
+Instance: REF_CLK_M__L3_I0 R0 13.5300 54.9400
+Instance: REF_CLK_M__L2_I0 R0 23.3700 54.9400
+Instance: REF_CLK_M__L1_I0 MX 32.8000 52.0700
+Instance: ALU_CLK__L4_I1 MX 138.5800 52.0700
+Instance: ALU_CLK__L4_I0 R0 115.6200 26.2400
+Instance: ALU_CLK__L3_I0 R0 166.0500 31.9800
+Instance: ALU_CLK__L2_I0 MX 154.5700 29.1100
+Instance: ALU_CLK__L1_I0 R0 109.0600 37.7200
+Instance: UART_CLK_M__L13_I0 MX 8.2000 97.9900
+Instance: UART_CLK_M__L12_I0 MX 21.3200 97.9900
+Instance: UART_CLK_M__L11_I0 R0 9.0200 83.6400
+Instance: UART_CLK_M__L10_I0 R0 15.5800 95.1200
+Instance: UART_CLK_M__L9_I0 R0 45.5100 135.3000
+Instance: UART_CLK_M__L8_I0 R0 86.5100 83.6400
+Instance: UART_CLK_M__L7_I0 MX 52.0700 46.3300
+Instance: UART_CLK_M__L6_I1 R0 33.6200 89.3800
+Instance: UART_CLK_M__L6_I0 R0 22.5500 89.3800
+Instance: UART_CLK_M__L5_I0 R0 6.9700 95.1200
+Instance: UART_CLK_M__L4_I0 MX 29.9300 92.2500
+Instance: UART_CLK_M__L3_I0 R0 47.5600 77.9000
+Instance: UART_CLK_M__L2_I0 MX 23.3700 115.2100
+Instance: UART_CLK_M__L1_I0 R0 16.8100 66.4200
+Instance: RX_Clock_Divider/clk_div_reg__L1_I0 R0 45.5100 72.1600
+Instance: RX_Clock_Divider/clk_div_reg__Exclude_0 R0 46.7400 141.0400
+Instance: TX_Clock_Divider/clk_div_reg__Exclude_0 R0 33.6200 118.0800
+Instance: TX_CLK__L1_I0 MX 41.8200 115.2100
+Instance: TX_CLK_M__L4_I1 MX 98.8100 103.7300
+Instance: TX_CLK_M__L4_I0 MX 90.2000 103.7300
+Instance: TX_CLK_M__L3_I0 MX 81.5900 103.7300
+Instance: TX_CLK_M__L2_I0 MX 107.4200 103.7300
+Instance: TX_CLK_M__L1_I0 MX 26.2400 103.7300
+Instance: RX_CLK_M__L3_I1 R0 27.0600 20.5000
+Instance: RX_CLK_M__L3_I0 R0 65.6000 20.5000
+Instance: RX_CLK_M__L2_I0 R0 53.7100 14.7600
+Instance: RX_CLK_M__L1_I0 MX 56.5800 29.1100
+Instance: Domain_1_Reset/memory_reg[1] MY 37.3100 60.6800
+Instance: Domain_1_Reset/memory_reg[0] MY 43.4600 66.4200
+Instance: Domain_2_Reset/memory_reg[1] MX 34.0300 63.5500
+Instance: Domain_2_Reset/memory_reg[0] MY 25.4200 60.6800
+Instance: RX_Clock_Divider/counter_reg[7] MY 21.3200 83.6400
+Instance: RX_Clock_Divider/counter_reg[2] R0 22.1400 72.1600
+Instance: RX_Clock_Divider/counter_reg[6] R180 17.6300 92.2500
+Instance: RX_Clock_Divider/counter_reg[5] R180 6.1500 92.2500
+Instance: RX_Clock_Divider/counter_reg[4] MX 21.7300 80.7700
+Instance: RX_Clock_Divider/counter_reg[3] R180 20.9100 75.0300
+Instance: RX_Clock_Divider/clk_div_reg_reg R0 34.0300 72.1600
+Instance: RX_Clock_Divider/U54 MX 32.3900 75.0300
+Instance: RX_Clock_Divider/U59 R0 21.3200 60.6800
+Instance: RX_Clock_Divider/counter_reg[1] MY 22.5500 66.4200
+Instance: RX_Clock_Divider/counter_reg[0] MX 22.5500 63.5500
+Instance: TX_Clock_Divider/clk_div_reg_reg R0 22.1400 118.0800
+Instance: TX_Clock_Divider/counter_reg[7] MX 10.2500 115.2100
+Instance: TX_Clock_Divider/counter_reg[2] R180 17.6300 132.4300
+Instance: TX_Clock_Divider/counter_reg[6] MX 8.2000 126.6900
+Instance: TX_Clock_Divider/counter_reg[5] R180 6.1500 120.9500
+Instance: TX_Clock_Divider/counter_reg[4] MY 11.4800 129.5600
+Instance: TX_Clock_Divider/counter_reg[3] R0 7.3800 135.3000
+Instance: TX_Clock_Divider/counter_reg[0] MX 20.9100 120.9500
+Instance: TX_Clock_Divider/counter_reg[1] R0 22.1400 123.8200
+Instance: TX_Clock_Divider/U46 R0 20.9100 112.3400
+Instance: TX_Clock_Divider/U51 R0 34.0300 112.3400
+Instance: Clock_Gating/U0_TLATNCAX12M MX 92.6600 40.5900
+Instance: Register_File/RD_Data_reg[7] MX 109.0600 86.5100
+Instance: Register_File/RD_Data_reg[6] R0 111.1100 89.3800
+Instance: Register_File/RD_Data_reg[5] MX 126.6900 92.2500
+Instance: Register_File/RD_Data_reg[4] R0 123.0000 100.8600
+Instance: Register_File/RD_Data_reg[3] MX 126.6900 97.9900
+Instance: Register_File/RD_Data_reg[2] MX 123.0000 86.5100
+Instance: Register_File/RD_Data_reg[1] R0 126.2800 83.6400
+Instance: Register_File/RD_Data_reg[0] R0 95.1200 83.6400
+Instance: Register_File/RD_Valid_reg R0 92.6600 72.1600
+Instance: Register_File/reg_file_reg[15][7] MY 75.8500 72.1600
+Instance: Register_File/reg_file_reg[15][6] MX 72.9800 80.7700
+Instance: Register_File/reg_file_reg[15][5] MY 66.8300 83.6400
+Instance: Register_File/reg_file_reg[15][4] R0 75.4400 89.3800
+Instance: Register_File/reg_file_reg[15][3] MX 76.6700 92.2500
+Instance: Register_File/reg_file_reg[15][2] MY 82.8200 95.1200
+Instance: Register_File/reg_file_reg[15][1] MX 90.2000 86.5100
+Instance: Register_File/reg_file_reg[15][0] R0 93.0700 89.3800
+Instance: Register_File/reg_file_reg[13][7] R0 96.3500 100.8600
+Instance: Register_File/reg_file_reg[13][6] MY 94.3000 95.1200
+Instance: Register_File/reg_file_reg[13][5] MX 108.6500 92.2500
+Instance: Register_File/reg_file_reg[13][4] R0 111.5200 95.1200
+Instance: Register_File/reg_file_reg[13][3] R0 120.9500 118.0800
+Instance: Register_File/reg_file_reg[13][1] MX 113.9800 115.2100
+Instance: Register_File/reg_file_reg[13][0] MX 102.5000 115.2100
+Instance: Register_File/reg_file_reg[11][7] MX 106.6000 120.9500
+Instance: Register_File/reg_file_reg[11][6] MX 95.1200 120.9500
+Instance: Register_File/reg_file_reg[11][5] MX 93.8900 126.6900
+Instance: Register_File/reg_file_reg[11][4] R0 115.2100 141.0400
+Instance: Register_File/reg_file_reg[11][3] MX 111.1100 143.9100
+Instance: Register_File/reg_file_reg[11][2] R0 111.1100 146.7800
+Instance: Register_File/reg_file_reg[11][1] MX 111.1100 138.1700
+Instance: Register_File/reg_file_reg[11][0] R0 112.3400 135.3000
+Instance: Register_File/reg_file_reg[9][7] R0 77.9000 135.3000
+Instance: Register_File/reg_file_reg[9][6] R0 77.4900 141.0400
+Instance: Register_File/reg_file_reg[9][5] MX 78.7200 143.9100
+Instance: Register_File/reg_file_reg[9][4] R0 70.1100 146.7800
+Instance: Register_File/reg_file_reg[9][3] MY 58.6300 146.7800
+Instance: Register_File/reg_file_reg[9][2] MX 70.9300 138.1700
+Instance: Register_File/reg_file_reg[9][1] R0 66.4200 135.3000
+Instance: Register_File/reg_file_reg[9][0] MX 69.7000 132.4300
+Instance: Register_File/reg_file_reg[7][7] R180 58.2200 132.4300
+Instance: Register_File/reg_file_reg[7][6] R0 52.4800 141.0400
+Instance: Register_File/reg_file_reg[7][5] MX 51.2500 143.9100
+Instance: Register_File/reg_file_reg[7][4] MY 20.9100 146.7800
+Instance: Register_File/reg_file_reg[7][3] MY 20.0900 141.0400
+Instance: Register_File/reg_file_reg[7][2] R0 34.0300 135.3000
+Instance: Register_File/reg_file_reg[7][1] R0 36.0800 129.5600
+Instance: Register_File/reg_file_reg[7][0] MX 39.7700 126.6900
+Instance: Register_File/reg_file_reg[5][7] MX 32.8000 120.9500
+Instance: Register_File/reg_file_reg[5][6] R0 36.9000 118.0800
+Instance: Register_File/reg_file_reg[5][5] MX 30.3400 115.2100
+Instance: Register_File/reg_file_reg[5][4] MX 36.4900 109.4700
+Instance: Register_File/reg_file_reg[5][3] R0 36.9000 106.6000
+Instance: Register_File/reg_file_reg[5][2] MX 34.0300 103.7300
+Instance: Register_File/reg_file_reg[5][1] MX 38.1300 97.9900
+Instance: Register_File/reg_file_reg[5][0] R180 49.6100 97.9900
+Instance: Register_File/reg_file_reg[14][7] MX 68.8800 97.9900
+Instance: Register_File/reg_file_reg[14][6] R0 64.7800 100.8600
+Instance: Register_File/reg_file_reg[14][5] R180 69.7000 103.7300
+Instance: Register_File/reg_file_reg[14][4] R0 79.1300 100.8600
+Instance: Register_File/reg_file_reg[14][3] MX 75.0300 109.4700
+Instance: Register_File/reg_file_reg[14][2] R0 74.2100 112.3400
+Instance: Register_File/reg_file_reg[14][1] MY 85.6900 112.3400
+Instance: Register_File/reg_file_reg[14][0] R0 97.1700 112.3400
+Instance: Register_File/reg_file_reg[12][7] R0 108.6500 112.3400
+Instance: Register_File/reg_file_reg[12][6] R0 108.2400 106.6000
+Instance: Register_File/reg_file_reg[12][5] R0 108.6500 100.8600
+Instance: Register_File/reg_file_reg[12][4] MX 120.1300 103.7300
+Instance: Register_File/reg_file_reg[12][3] R0 122.1800 106.6000
+Instance: Register_File/reg_file_reg[12][2] MX 120.9500 120.9500
+Instance: Register_File/reg_file_reg[12][1] MX 118.0800 126.6900
+Instance: Register_File/reg_file_reg[12][0] R0 115.2100 123.8200
+Instance: Register_File/reg_file_reg[10][7] R0 105.3700 129.5600
+Instance: Register_File/reg_file_reg[10][6] MX 105.7800 126.6900
+Instance: Register_File/reg_file_reg[10][5] R0 100.8600 135.3000
+Instance: Register_File/reg_file_reg[10][4] R180 93.8900 138.1700
+Instance: Register_File/reg_file_reg[10][3] R0 99.6300 146.7800
+Instance: Register_File/reg_file_reg[10][2] MY 88.1500 146.7800
+Instance: Register_File/reg_file_reg[10][1] R0 92.2500 141.0400
+Instance: Register_File/reg_file_reg[10][0] R0 89.3800 135.3000
+Instance: Register_File/reg_file_reg[8][7] R0 81.1800 129.5600
+Instance: Register_File/reg_file_reg[8][6] R0 79.5400 118.0800
+Instance: Register_File/reg_file_reg[8][5] MX 78.3100 120.9500
+Instance: Register_File/reg_file_reg[8][4] MX 77.9000 126.6900
+Instance: Register_File/reg_file_reg[8][3] R180 66.4200 126.6900
+Instance: Register_File/reg_file_reg[8][2] R0 62.7300 118.0800
+Instance: Register_File/reg_file_reg[8][1] MX 70.1100 115.2100
+Instance: Register_File/reg_file_reg[8][0] R0 57.8100 112.3400
+Instance: Register_File/reg_file_reg[6][7] R0 50.4300 129.5600
+Instance: Register_File/reg_file_reg[6][6] MX 46.7400 132.4300
+Instance: Register_File/reg_file_reg[6][5] MX 50.8400 138.1700
+Instance: Register_File/reg_file_reg[6][4] R0 47.1500 146.7800
+Instance: Register_File/reg_file_reg[6][3] MY 32.3900 146.7800
+Instance: Register_File/reg_file_reg[6][2] MX 36.4900 138.1700
+Instance: Register_File/reg_file_reg[6][1] MX 35.2600 132.4300
+Instance: Register_File/reg_file_reg[6][0] R0 40.1800 123.8200
+Instance: Register_File/reg_file_reg[4][7] MX 55.3500 120.9500
+Instance: Register_File/reg_file_reg[4][6] R0 51.6600 123.8200
+Instance: Register_File/reg_file_reg[4][5] R0 48.3800 118.0800
+Instance: Register_File/reg_file_reg[4][4] R0 44.2800 112.3400
+Instance: Register_File/reg_file_reg[4][3] R0 51.6600 106.6000
+Instance: Register_File/reg_file_reg[4][2] MX 48.7900 103.7300
+Instance: Register_File/reg_file_reg[4][1] R0 45.9200 95.1200
+Instance: Register_File/reg_file_reg[4][0] MY 50.8400 89.3800
+Instance: Register_File/reg_file_reg[2][1] R0 53.7100 83.6400
+Instance: Register_File/reg_file_reg[2][0] MX 72.9800 69.2900
+Instance: Register_File/reg_file_reg[3][5] MX 52.4800 75.0300
+Instance: Register_File/reg_file_reg[2][4] MY 50.0200 72.1600
+Instance: Register_File/reg_file_reg[2][3] MY 64.3700 72.1600
+Instance: Register_File/reg_file_reg[2][5] MY 57.8100 66.4200
+Instance: Register_File/reg_file_reg[2][7] MX 48.7900 63.5500
+Instance: Register_File/reg_file_reg[1][6] MX 99.6300 69.2900
+Instance: Register_File/reg_file_reg[0][6] MX 105.3700 57.8100
+Instance: Register_File/reg_file_reg[2][6] R180 50.0200 57.8100
+Instance: Register_File/reg_file_reg[0][7] MX 103.7300 63.5500
+Instance: Register_File/reg_file_reg[2][2] MY 69.2900 66.4200
+Instance: Register_File/reg_file_reg[0][0] R0 101.6800 66.4200
+Instance: Register_File/reg_file_reg[0][1] R0 116.8500 66.4200
+Instance: Register_File/reg_file_reg[1][3] MX 124.6400 75.0300
+Instance: Register_File/reg_file_reg[1][2] MX 120.5400 80.7700
+Instance: Register_File/reg_file_reg[0][5] MY 110.7000 54.9400
+Instance: Register_File/reg_file_reg[0][4] MX 116.8500 57.8100
+Instance: Register_File/reg_file_reg[3][2] MY 30.7500 95.1200
+Instance: Register_File/reg_file_reg[1][5] MY 93.8900 77.9000
+Instance: Register_File/reg_file_reg[1][0] MY 107.4200 72.1600
+Instance: Register_File/reg_file_reg[0][3] R180 121.7700 63.5500
+Instance: Register_File/reg_file_reg[0][2] R0 128.3300 66.4200
+Instance: Register_File/reg_file_reg[1][7] MX 110.7000 75.0300
+Instance: Register_File/reg_file_reg[1][1] MX 109.0600 80.7700
+Instance: Register_File/reg_file_reg[3][6] MX 40.1800 80.7700
+Instance: Register_File/reg_file_reg[3][1] R180 30.3400 86.5100
+Instance: Register_File/reg_file_reg[3][4] MX 38.9500 75.0300
+Instance: Register_File/reg_file_reg[3][3] MX 40.1800 92.2500
+Instance: Register_File/reg_file_reg[3][7] MX 42.2300 86.5100
+Instance: Register_File/reg_file_reg[3][0] R0 38.1300 83.6400
+Instance: Register_File/reg_file_reg[1][4] R0 123.4100 72.1600
+Instance: Register_File/reg_file_reg[13][2] R0 123.4100 112.3400
+Instance: ALU/u1/arith_out_reg[7] R180 151.2900 40.5900
+Instance: ALU/u1/arith_out_reg[6] MY 154.1600 43.4600
+Instance: ALU/u1/arith_out_reg[5] MX 150.4700 46.3300
+Instance: ALU/u1/arith_out_reg[4] MY 139.8100 54.9400
+Instance: ALU/u1/arith_out_reg[3] R180 149.6500 52.0700
+Instance: ALU/u1/arith_out_reg[2] MY 157.8500 49.2000
+Instance: ALU/u1/arith_out_reg[8] MY 144.7300 37.7200
+Instance: ALU/u1/arith_out_reg[1] MY 137.3500 49.2000
+Instance: ALU/u1/arith_out_reg[0] MY 132.8400 43.4600
+Instance: ALU/u1/ALU_Valid_reg R180 134.4800 63.5500
+Instance: ALU/u1/arith_out_reg[15] R180 144.7300 57.8100
+Instance: ALU/u1/arith_out_reg[14] R180 149.2400 63.5500
+Instance: ALU/u1/arith_out_reg[13] R180 154.9800 69.2900
+Instance: ALU/u1/arith_out_reg[12] R0 159.4900 66.4200
+Instance: ALU/u1/arith_out_reg[11] MY 152.5200 60.6800
+Instance: ALU/u1/arith_out_reg[10] R180 156.2100 57.8100
+Instance: ALU/u1/arith_out_reg[9] MY 156.2100 37.7200
+Instance: ALU/u2/logic_out_reg[7] R0 130.3800 31.9800
+Instance: ALU/u2/logic_out_reg[6] MX 121.7700 34.8500
+Instance: ALU/u2/logic_out_reg[5] MX 134.8900 40.5900
+Instance: ALU/u2/logic_out_reg[4] R0 120.9500 37.7200
+Instance: ALU/u2/logic_out_reg[3] R0 121.3600 43.4600
+Instance: ALU/u2/logic_out_reg[2] MX 134.0700 46.3300
+Instance: ALU/u2/logic_out_reg[1] R0 121.7700 49.2000
+Instance: ALU/u2/logic_out_reg[0] R180 120.9500 52.0700
+Instance: ALU/u2/ALU_Valid_reg R180 129.9700 57.8100
+Instance: ALU/u3/ALU_Valid_reg R0 124.2300 26.2400
+Instance: ALU/u3/cmp_out_reg[1] MX 123.0000 23.3700
+Instance: ALU/u3/cmp_out_reg[0] MY 126.6900 20.5000
+Instance: ALU/u4/shift_out_reg[8] R180 143.9100 34.8500
+Instance: ALU/u4/ALU_Valid_reg MX 135.3000 23.3700
+Instance: ALU/u4/shift_out_reg[1] R180 138.5800 17.6300
+Instance: ALU/u4/shift_out_reg[0] MY 137.7600 14.7600
+Instance: ALU/u4/shift_out_reg[7] MX 140.6300 29.1100
+Instance: ALU/u4/shift_out_reg[6] R0 136.5300 26.2400
+Instance: ALU/u4/shift_out_reg[5] MY 138.1700 20.5000
+Instance: ALU/u4/shift_out_reg[4] R180 140.6300 6.1500
+Instance: ALU/u4/shift_out_reg[3] MX 136.1200 11.8900
+Instance: ALU/u4/shift_out_reg[2] R0 139.8100 9.0200
+Instance: Data_Synchronizer/pulse_flop_reg MY 93.4800 9.0200
+Instance: Data_Synchronizer/meta_flop_reg[7] R180 91.8400 6.1500
+Instance: Data_Synchronizer/sync_bus_reg[7] R180 79.9500 34.8500
+Instance: Data_Synchronizer/sync_bus_reg[5] MY 92.2500 26.2400
+Instance: Data_Synchronizer/sync_bus_reg[3] MY 76.6700 20.5000
+Instance: Data_Synchronizer/sync_bus_reg[1] MY 81.5900 14.7600
+Instance: Data_Synchronizer/meta_flop_reg[0] R0 100.0400 20.5000
+Instance: Data_Synchronizer/meta_flop_reg[1] MX 104.1400 23.3700
+Instance: Data_Synchronizer/meta_flop_reg[2] R180 106.6000 29.1100
+Instance: Data_Synchronizer/meta_flop_reg[3] R0 103.7300 26.2400
+Instance: Data_Synchronizer/meta_flop_reg[4] MY 102.5000 14.7600
+Instance: Data_Synchronizer/meta_flop_reg[5] MX 105.7800 11.8900
+Instance: Data_Synchronizer/meta_flop_reg[6] R180 106.1900 6.1500
+Instance: Data_Synchronizer/sync_bus_reg[0] MX 94.3000 11.8900
+Instance: Data_Synchronizer/enable_pulse_reg R180 96.7600 34.8500
+Instance: Data_Synchronizer/sync_bus_reg[2] R180 77.0800 29.1100
+Instance: Data_Synchronizer/sync_bus_reg[4] R0 88.1500 20.5000
+Instance: Data_Synchronizer/sync_bus_reg[6] R0 92.2500 31.9800
+Instance: Pulse_Generator/pulse_flop_reg[1] R180 32.8000 69.2900
+Instance: Pulse_Generator/pulse_flop_reg[0] R180 44.2800 69.2900
+Instance: SYS_CTRL/store_func_reg[1] MY 67.2400 43.4600
+Instance: SYS_CTRL/store_func_reg[0] MX 67.2400 46.3300
+Instance: SYS_CTRL/store_address_reg[1] MX 65.6000 63.5500
+Instance: SYS_CTRL/store_func_reg[2] MY 69.2900 37.7200
+Instance: SYS_CTRL/store_func_reg[3] R180 65.6000 40.5900
+Instance: SYS_CTRL/store_address_reg[0] MY 69.7000 49.2000
+Instance: SYS_CTRL/store_address_reg[3] R180 64.7800 57.8100
+Instance: SYS_CTRL/store_address_reg[2] MY 68.0600 60.6800
+Instance: SYS_CTRL/current_state_reg[1] MY 81.1800 49.2000
+Instance: SYS_CTRL/current_state_reg[2] R0 78.7200 54.9400
+Instance: SYS_CTRL/current_state_reg[3] R180 79.1300 46.3300
+Instance: SYS_CTRL/current_state_reg[0] MX 78.7200 57.8100
+Instance: TX_FIFO/U0/MEM_reg[5][7] R0 193.9300 135.3000
+Instance: TX_FIFO/U0/MEM_reg[5][6] R0 189.8300 141.0400
+Instance: TX_FIFO/U0/MEM_reg[5][5] R180 181.6300 143.9100
+Instance: TX_FIFO/U0/MEM_reg[5][4] R0 181.6300 135.3000
+Instance: TX_FIFO/U0/MEM_reg[5][3] MX 180.4000 132.4300
+Instance: TX_FIFO/U0/MEM_reg[5][2] MX 176.3000 126.6900
+Instance: TX_FIFO/U0/MEM_reg[5][1] R0 177.1200 118.0800
+Instance: TX_FIFO/U0/MEM_reg[5][0] MX 178.7600 115.2100
+Instance: TX_FIFO/U0/MEM_reg[4][7] R180 182.4500 109.4700
+Instance: TX_FIFO/U0/MEM_reg[4][6] R0 181.2200 89.3800
+Instance: TX_FIFO/U0/MEM_reg[4][5] MX 178.3500 86.5100
+Instance: TX_FIFO/U0/MEM_reg[4][4] R180 180.8100 80.7700
+Instance: TX_FIFO/U0/MEM_reg[4][3] MY 190.6500 83.6400
+Instance: TX_FIFO/U0/MEM_reg[4][2] R0 193.1100 89.3800
+Instance: TX_FIFO/U0/MEM_reg[4][1] R180 190.6500 92.2500
+Instance: TX_FIFO/U0/MEM_reg[4][0] MX 192.7000 115.2100
+Instance: TX_FIFO/U0/MEM_reg[7][7] R0 190.2400 123.8200
+Instance: TX_FIFO/U0/MEM_reg[7][6] MX 189.0100 126.6900
+Instance: TX_FIFO/U0/MEM_reg[7][5] MX 170.5600 132.4300
+Instance: TX_FIFO/U0/MEM_reg[7][4] MY 162.7700 129.5600
+Instance: TX_FIFO/U0/MEM_reg[7][3] MY 162.7700 123.8200
+Instance: TX_FIFO/U0/MEM_reg[7][2] R180 163.5900 120.9500
+Instance: TX_FIFO/U0/MEM_reg[7][1] R180 163.1800 115.2100
+Instance: TX_FIFO/U0/MEM_reg[7][0] MY 163.1800 112.3400
+Instance: TX_FIFO/U0/MEM_reg[6][7] R0 170.1500 106.6000
+Instance: TX_FIFO/U0/MEM_reg[6][6] MY 168.9200 100.8600
+Instance: TX_FIFO/U0/MEM_reg[6][5] MX 170.9700 97.9900
+Instance: TX_FIFO/U0/MEM_reg[6][4] MY 168.9200 89.3800
+Instance: TX_FIFO/U0/MEM_reg[6][3] MX 171.7900 92.2500
+Instance: TX_FIFO/U0/MEM_reg[6][2] MX 193.5200 97.9900
+Instance: TX_FIFO/U0/MEM_reg[6][1] MX 187.7800 103.7300
+Instance: TX_FIFO/U0/MEM_reg[6][0] MX 191.8800 109.4700
+Instance: TX_FIFO/U0/MEM_reg[1][7] R0 206.2300 118.0800
+Instance: TX_FIFO/U0/MEM_reg[1][6] MY 209.5100 146.7800
+Instance: TX_FIFO/U0/MEM_reg[1][5] R180 209.5100 143.9100
+Instance: TX_FIFO/U0/MEM_reg[1][4] R180 210.7400 138.1700
+Instance: TX_FIFO/U0/MEM_reg[1][3] R0 223.4500 129.5600
+Instance: TX_FIFO/U0/MEM_reg[1][2] R0 224.2700 123.8200
+Instance: TX_FIFO/U0/MEM_reg[1][1] MX 219.3500 120.9500
+Instance: TX_FIFO/U0/MEM_reg[1][0] R0 211.1500 112.3400
+Instance: TX_FIFO/U0/MEM_reg[0][7] R180 207.8700 103.7300
+Instance: TX_FIFO/U0/MEM_reg[0][6] MX 212.7900 97.9900
+Instance: TX_FIFO/U0/MEM_reg[0][5] R180 211.1500 92.2500
+Instance: TX_FIFO/U0/MEM_reg[0][4] R0 208.2800 89.3800
+Instance: TX_FIFO/U0/MEM_reg[0][3] R180 203.3600 97.9900
+Instance: TX_FIFO/U0/MEM_reg[0][2] R0 200.4900 100.8600
+Instance: TX_FIFO/U0/MEM_reg[0][1] MX 198.4400 103.7300
+Instance: TX_FIFO/U0/MEM_reg[0][0] R0 198.0300 112.3400
+Instance: TX_FIFO/U0/MEM_reg[3][7] R180 193.9300 132.4300
+Instance: TX_FIFO/U0/MEM_reg[3][6] R180 195.5700 138.1700
+Instance: TX_FIFO/U0/MEM_reg[3][5] R0 205.8200 141.0400
+Instance: TX_FIFO/U0/MEM_reg[3][4] R180 209.9200 132.4300
+Instance: TX_FIFO/U0/MEM_reg[3][3] R0 212.7900 129.5600
+Instance: TX_FIFO/U0/MEM_reg[3][2] R180 209.9200 120.9500
+Instance: TX_FIFO/U0/MEM_reg[3][1] R180 224.6800 115.2100
+Instance: TX_FIFO/U0/MEM_reg[3][0] MY 223.8600 112.3400
+Instance: TX_FIFO/U0/MEM_reg[2][7] R0 219.7600 106.6000
+Instance: TX_FIFO/U0/MEM_reg[2][6] R0 211.1500 83.6400
+Instance: TX_FIFO/U0/MEM_reg[2][5] MX 210.3300 86.5100
+Instance: TX_FIFO/U0/MEM_reg[2][4] R180 195.9800 86.5100
+Instance: TX_FIFO/U0/MEM_reg[2][3] R180 221.8100 92.2500
+Instance: TX_FIFO/U0/MEM_reg[2][2] MY 224.2700 95.1200
+Instance: TX_FIFO/U0/MEM_reg[2][1] MX 219.3500 103.7300
+Instance: TX_FIFO/U0/MEM_reg[2][0] MX 206.2300 115.2100
+Instance: TX_FIFO/U1/W_counter_reg[3] R180 159.0800 132.4300
+Instance: TX_FIFO/U1/W_ptr_reg[0] MY 151.7000 141.0400
+Instance: TX_FIFO/U1/W_ptr_reg[1] MY 153.7500 146.7800
+Instance: TX_FIFO/U1/W_ptr_reg[3] R180 149.6500 138.1700
+Instance: TX_FIFO/U1/W_ptr_reg[2] R180 150.0600 143.9100
+Instance: TX_FIFO/U1/W_counter_reg[2] R0 168.5100 146.7800
+Instance: TX_FIFO/U1/W_counter_reg[0] R0 171.3800 141.0400
+Instance: TX_FIFO/U1/W_counter_reg[1] MX 169.7400 143.9100
+Instance: TX_FIFO/U2/R_counter_reg[3] MX 133.2500 115.2100
+Instance: TX_FIFO/U2/R_ptr_reg[0] R180 131.6100 103.7300
+Instance: TX_FIFO/U2/R_ptr_reg[3] R180 132.4300 120.9500
+Instance: TX_FIFO/U2/R_ptr_reg[2] R0 132.4300 118.0800
+Instance: TX_FIFO/U2/R_ptr_reg[1] R180 125.0500 109.4700
+Instance: TX_FIFO/U2/R_counter_reg[0] R0 155.8000 118.0800
+Instance: TX_FIFO/U2/R_counter_reg[2] R180 136.5300 109.4700
+Instance: TX_FIFO/U2/R_counter_reg[1] MX 151.2900 115.2100
+Instance: TX_FIFO/U3_FIFO_WR/stage2_reg[1] R0 134.0700 146.7800
+Instance: TX_FIFO/U3_FIFO_WR/stage2_reg[0] R0 122.5900 146.7800
+Instance: TX_FIFO/U3_FIFO_WR/stage2_reg[3] R0 136.1200 141.0400
+Instance: TX_FIFO/U3_FIFO_WR/stage2_reg[2] MX 135.3000 143.9100
+Instance: TX_FIFO/U3_FIFO_WR/stage1_reg[3] R180 123.0000 143.9100
+Instance: TX_FIFO/U3_FIFO_WR/stage1_reg[2] R180 134.0700 138.1700
+Instance: TX_FIFO/U3_FIFO_WR/stage1_reg[1] MX 133.6600 132.4300
+Instance: TX_FIFO/U3_FIFO_WR/stage1_reg[0] MY 123.4100 129.5600
+Instance: TX_FIFO/U4_FIFO_RD/stage2_reg[3] MY 138.5800 123.8200
+Instance: TX_FIFO/U4_FIFO_RD/stage2_reg[2] MY 150.0600 123.8200
+Instance: TX_FIFO/U4_FIFO_RD/stage2_reg[1] MX 149.6500 126.6900
+Instance: TX_FIFO/U4_FIFO_RD/stage2_reg[0] R180 136.9400 126.6900
+Instance: TX_FIFO/U4_FIFO_RD/stage1_reg[3] R180 152.1100 120.9500
+Instance: TX_FIFO/U4_FIFO_RD/stage1_reg[2] R0 149.6500 129.5600
+Instance: TX_FIFO/U4_FIFO_RD/stage1_reg[1] MY 138.1700 135.3000
+Instance: TX_FIFO/U4_FIFO_RD/stage1_reg[0] R0 152.9300 135.3000
+Instance: UART/TX_INST/P_data_reg_reg[1] R180 160.3100 92.2500
+Instance: UART/TX_INST/P_data_reg_reg[4] MY 150.8800 112.3400
+Instance: UART/TX_INST/P_data_reg_reg[0] MX 165.6400 86.5100
+Instance: UART/TX_INST/P_data_reg_reg[5] R180 145.5500 97.9900
+Instance: UART/TX_INST/P_data_reg_reg[3] MX 154.1600 109.4700
+Instance: UART/TX_INST/P_data_reg_reg[7] R0 165.6400 95.1200
+Instance: UART/TX_INST/P_data_reg_reg[2] MY 148.0100 95.1200
+Instance: UART/TX_INST/P_data_reg_reg[6] MX 151.2900 103.7300
+Instance: UART/TX_INST/U1/current_state_reg[2] R0 165.6400 72.1600
+Instance: UART/TX_INST/U1/current_state_reg[1] MX 164.0000 75.0300
+Instance: UART/TX_INST/U1/current_state_reg[0] R180 164.8200 80.7700
+Instance: UART/TX_INST/U3/par_bit_reg R180 149.2400 86.5100
+Instance: UART/TX_INST/U4/ser_data_reg MY 134.4800 89.3800
+Instance: UART/TX_INST/U4/counter_reg[2] R180 138.1700 92.2500
+Instance: UART/TX_INST/U4/counter_reg[1] R0 134.8900 95.1200
+Instance: UART/TX_INST/U4/counter_reg[0] R180 134.8900 80.7700
+Instance: UART/RX_INST/U0/current_state_reg[0] MY 43.8700 43.4600
+Instance: UART/RX_INST/U0/data_valid_reg R0 56.1700 26.2400
+Instance: UART/RX_INST/U0/current_state_reg[2] MX 48.7900 40.5900
+Instance: UART/RX_INST/U0/current_state_reg[1] MY 38.9500 26.2400
+Instance: UART/RX_INST/U1/bit_count_reg[3] MX 22.9600 17.6300
+Instance: UART/RX_INST/U1/bit_count_reg[1] R0 18.0400 9.0200
+Instance: UART/RX_INST/U1/bit_count_reg[2] R180 20.9100 6.1500
+Instance: UART/RX_INST/U1/edge_count_reg[0] R180 14.3500 23.3700
+Instance: UART/RX_INST/U1/edge_count_reg[1] MX 6.1500 11.8900
+Instance: UART/RX_INST/U1/bit_count_reg[0] R180 20.9100 11.8900
+Instance: UART/RX_INST/U1/edge_count_reg[4] R0 8.6100 20.5000
+Instance: UART/RX_INST/U1/edge_count_reg[3] R180 11.4800 17.6300
+Instance: UART/RX_INST/U1/edge_count_reg[2] MX 9.4300 6.1500
+Instance: UART/RX_INST/U2/counter_reg[0] R180 32.3900 6.1500
+Instance: UART/RX_INST/U2/compare_reg[2] R0 50.8400 9.0200
+Instance: UART/RX_INST/U2/counter_reg[1] MX 43.8700 6.1500
+Instance: UART/RX_INST/U2/compare_reg[1] MX 45.5100 17.6300
+Instance: UART/RX_INST/U2/compare_reg[0] R0 38.1300 20.5000
+Instance: UART/RX_INST/U3/counter_reg[1] R180 55.3500 6.1500
+Instance: UART/RX_INST/U3/counter_reg[2] R180 50.8400 11.8900
+Instance: UART/RX_INST/U3/P_DATA_reg[5] MX 82.8200 11.8900
+Instance: UART/RX_INST/U3/P_DATA_reg[1] MX 65.6000 29.1100
+Instance: UART/RX_INST/U3/P_DATA_reg[4] MX 78.3100 17.6300
+Instance: UART/RX_INST/U3/P_DATA_reg[0] MX 56.9900 17.6300
+Instance: UART/RX_INST/U3/P_DATA_reg[7] R0 67.2400 9.0200
+Instance: UART/RX_INST/U3/P_DATA_reg[3] R0 68.8800 26.2400
+Instance: UART/RX_INST/U3/P_DATA_reg[6] R0 78.7200 9.0200
+Instance: UART/RX_INST/U3/P_DATA_reg[2] MX 66.0100 23.3700
+Instance: UART/RX_INST/U3/counter_reg[0] R180 66.8300 6.1500
+Instance: UART/RX_INST/U4/START_err_reg MX 41.4100 23.3700
+Instance: UART/RX_INST/U5/PAR_err_reg MY 52.4800 31.9800
+Instance: UART/RX_INST/U6/STOP_err_reg MY 55.3500 43.4600
+Instance: REF_CLK_MUX/U1 MY 6.1500 54.9400
+Instance: UART_CLK_MUX/U1 MX 6.1500 57.8100
+Instance: TX_CLK_MUX/U1 MX 32.8000 97.9900
+Instance: RX_CLK_MUX/U1 MX 30.3400 57.8100
+
+#################################################################
+#  Block: <name> <orient> [<llx> <lly>]                         #
+#         [<haloLeftMargin>  <haloBottomMargin>                 #
+#          <haloRightMargin> <haloTopMargin> <haloFromInstBox>] #
+#         [<IsInstDefCovered> <IsInstPreplaced>]                #
+#                                                               #
+#  Block with INT_MAX loc is for recording the halo block with  #
+#  non-prePlaced status                                         #
+#################################################################
+
+######################################################
+#  BlockLayerObstruct: <name> <layerX> ...           #
+######################################################
+
+######################################################
+#  FeedthroughBuffer: <instName>                     #
+######################################################
+
+#################################################################
+#  <PlacementBlockages>                                         #
+#     <Blockage name="blk_name" type="hard|soft|partial">       #
+#       <Attr density=1.2 inst="inst_name" pushdown=yes />      #
+#       <Box llx=1 lly=2 urx=3 ury=4 /> ...                     #
+#     </Blockage>                                               #
+#  </PlacementBlockages>                                        #
+#################################################################
+<PlacementBlockages>
+    <Blockage type="hard" >
+	<Box llx=1.6400 lly=152.5200 urx=238.2100 ury=158.2600 />
+    </Blockage>
+</PlacementBlockages>
+
+###########################################################################
+#  <RouteBlockages>                                                       #
+#     <Blockage name="blk_name" type="User|RouteGuide|PtnCut|WideWire">   #
+#       <Attr spacing=1.2 drw=1.2 inst="name" pushdown=yes fills=yes />   #
+#       <Layer type="route|cut|masterslice" id=layerNo />                 #
+#       <Box llx=1 lly=2 urx=3 ury=4 /> ...                               #
+#       <Poly points=nr x0=1 y0=1 x1=2 y2=2 ...  />                       #
+#     </Blockage>                                                         #
+#  </RouteBlockages>                                                      #
+###########################################################################
+
+######################################################
+#  PrerouteAsObstruct: <layer_treated_as_obstruct>   #
+######################################################
+PrerouteAsObstruct: 0x3
+
+######################################################
+#  NetWeight: <net_name> <weight (in integer)>       #
+######################################################
+
+#################################################################
+#  SprFile: <file_name>                                         #
+#################################################################
+SprFile: SYS_TOP.fp.spr
+
+#########################################################################################
+#  IOPin: <pinName> <x> <y> <side> <layerId> <width> <depth> {placed|fixed|cover|-} <nrBox> \ #
+#         [-special] [-clock] [[-spacing <value>] | [-drw <value>]]                     #
+#    PinBox: <llx> <lly> <urx> <ury> [-lyr <layerId>] \                                 #
+#            [[-spacing <value>] | [-drw <value>]]                                      #
+#    PinPoly: <nrPt> <x1> <y1> <x2> <y2> ...<xn> <yn> [-lyr <layerId>] \                #
+#             [[-spacing <value>] | [-drw <value>]]                                     #
+#    PinAntenna: <pinName> <ANTENNAPIN*> <value> LAYER <layer>                          #
+#########################################################################################
+IOPin: scan_clk 0.0000 90.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 90.1000 0.1000 90.3000 -lyr 2
+IOPin: scan_rst 0.0000 80.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 80.1000 0.1000 80.3000 -lyr 2
+IOPin: test_mode 0.0000 100.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 100.1000 0.1000 100.3000 -lyr 2
+IOPin: SE 0.0000 110.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 110.1000 0.1000 110.3000 -lyr 2
+IOPin: SI[3] 0.0000 120.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 120.1000 0.1000 120.3000 -lyr 2
+IOPin: SI[2] 0.0000 130.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 130.1000 0.1000 130.3000 -lyr 2
+IOPin: SI[1] 0.0000 140.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 140.1000 0.1000 140.3000 -lyr 2
+IOPin: SI[0] 0.0000 150.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 150.1000 0.1000 150.3000 -lyr 2
+IOPin: SO[3] 240.5700 80.1000 E 3 0.2000 0.2000 fixed 1
+  PinBox: 240.4700 80.0000 240.6700 80.2000 -lyr 3
+IOPin: SO[2] 240.5700 100.1000 E 3 0.2000 0.2000 fixed 1
+  PinBox: 240.4700 100.0000 240.6700 100.2000 -lyr 3
+IOPin: SO[1] 240.5700 120.1000 E 3 0.2000 0.2000 fixed 1
+  PinBox: 240.4700 120.0000 240.6700 120.2000 -lyr 3
+IOPin: SO[0] 240.5700 140.1000 E 3 0.2000 0.2000 fixed 1
+  PinBox: 240.4700 140.0000 240.6700 140.2000 -lyr 3
+IOPin: RST_N 0.0000 70.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 70.1000 0.1000 70.3000 -lyr 2
+IOPin: UART_CLK 0.0000 60.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 60.1000 0.1000 60.3000 -lyr 2
+IOPin: REF_CLK 0.0000 50.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 50.1000 0.1000 50.3000 -lyr 2
+IOPin: UART_RX_IN 0.0000 40.1000 W 2 0.2000 0.2000 fixed 1
+  PinBox: -0.1000 40.1000 0.1000 40.3000 -lyr 2
+IOPin: UART_TX_O 240.5700 60.1000 E 3 0.2000 0.2000 fixed 1
+  PinBox: 240.4700 60.0000 240.6700 60.2000 -lyr 3
+IOPin: parity_error 240.5700 40.1000 E 3 0.2000 0.2000 fixed 1
+  PinBox: 240.4700 40.0000 240.6700 40.2000 -lyr 3
+IOPin: framing_error 240.5700 20.1000 E 3 0.2000 0.2000 fixed 1
+  PinBox: 240.4700 20.0000 240.6700 20.2000 -lyr 3
+
+##########################################################################
+#  <IOPins>                                                              #
+#    <Pin name="pin_name" type="clock|power|ground|analog"               #
+#         status="covered|fixed|placed" is_special=1 >                   #
+#      <Port>                                                            #
+#        <Pref x=1 y=2 side="N|S|W|E|U|D" width=w depth=d />             #
+#        <Via name="via_name" x=1 y=2 /> ...                             #
+#        <Layer id=id spacing=1.2 drw=1.2>                               #
+#          <Box llx=1 lly=2 urx=3 ury=4 /> ...                           #
+#          <Poly points=nr x0=1 y0=1 x1=2 y2=2 ...           />          #
+#        </Layer> ...                                                    #
+#      </Port>  ...                                                      #
+#    </Pin> ...                                                          #
+#  </IOPins>                                                             #
+##########################################################################
+<IOPins>
+  <Pin name="scan_clk" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=90.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=90.1000 urx=0.1000 ury=90.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="scan_rst" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=80.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=80.1000 urx=0.1000 ury=80.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="test_mode" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=100.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=100.1000 urx=0.1000 ury=100.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SE" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=110.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=110.1000 urx=0.1000 ury=110.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SI[3]" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=120.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=120.1000 urx=0.1000 ury=120.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SI[2]" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=130.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=130.1000 urx=0.1000 ury=130.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SI[1]" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=140.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=140.1000 urx=0.1000 ury=140.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SI[0]" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=150.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=150.1000 urx=0.1000 ury=150.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SO[3]" status="fixed" >
+    <Port>
+      <Pref x=240.5700 y=80.1000 side=E width=0.2000 depth=0.2000 />
+      <Layer id=3 >
+        <Box llx=240.4700 lly=80.0000 urx=240.6700 ury=80.2000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SO[2]" status="fixed" >
+    <Port>
+      <Pref x=240.5700 y=100.1000 side=E width=0.2000 depth=0.2000 />
+      <Layer id=3 >
+        <Box llx=240.4700 lly=100.0000 urx=240.6700 ury=100.2000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SO[1]" status="fixed" >
+    <Port>
+      <Pref x=240.5700 y=120.1000 side=E width=0.2000 depth=0.2000 />
+      <Layer id=3 >
+        <Box llx=240.4700 lly=120.0000 urx=240.6700 ury=120.2000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="SO[0]" status="fixed" >
+    <Port>
+      <Pref x=240.5700 y=140.1000 side=E width=0.2000 depth=0.2000 />
+      <Layer id=3 >
+        <Box llx=240.4700 lly=140.0000 urx=240.6700 ury=140.2000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="RST_N" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=70.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=70.1000 urx=0.1000 ury=70.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="UART_CLK" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=60.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=60.1000 urx=0.1000 ury=60.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="REF_CLK" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=50.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=50.1000 urx=0.1000 ury=50.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="UART_RX_IN" status="fixed" >
+    <Port>
+      <Pref x=0.0000 y=40.1000 side=W width=0.2000 depth=0.2000 />
+      <Layer id=2 >
+        <Box llx=-0.1000 lly=40.1000 urx=0.1000 ury=40.3000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="UART_TX_O" status="fixed" >
+    <Port>
+      <Pref x=240.5700 y=60.1000 side=E width=0.2000 depth=0.2000 />
+      <Layer id=3 >
+        <Box llx=240.4700 lly=60.0000 urx=240.6700 ury=60.2000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="parity_error" status="fixed" >
+    <Port>
+      <Pref x=240.5700 y=40.1000 side=E width=0.2000 depth=0.2000 />
+      <Layer id=3 >
+        <Box llx=240.4700 lly=40.0000 urx=240.6700 ury=40.2000 />
+      </Layer>
+    </Port>
+  </Pin>
+  <Pin name="framing_error" status="fixed" >
+    <Port>
+      <Pref x=240.5700 y=20.1000 side=E width=0.2000 depth=0.2000 />
+      <Layer id=3 >
+        <Box llx=240.4700 lly=20.0000 urx=240.6700 ury=20.2000 />
+      </Layer>
+    </Port>
+  </Pin>
+</IOPins>
+
+#####################################################################
+#  <Property>                                                       #
+#     <obj_type name="inst_name" >                                  #
+#       <prop name="name" type=type_name value=val />               #
+#       <Attr name="name" type=type_name value=val />               #
+#     </obj_type>                                                   #
+#  </Property>                                                      #
+#  where:                                                           #
+#       type is data type: Box, String, Int, PTR, Loc, double, Bits #
+#       obj_type are: inst, Design, instTerm, Bump, cell, net       #
+#####################################################################
+<Properties>
+  <Design name="SYS_TOP">
+  </Design>
+</Properties>
+
+###########################################################$############################################################################################
+#  GlobalNetConnection: <net_name> {-pin|-inst|-net} <base_name_pattern> -type {pgpin|net|tiehi|tielo} {-all|-module <name>|-region <box>} [-override] #
+########################################################################################################################################################
+GlobalNetConnection: VDD -pin VDD -inst * -type pgpin -all
+GlobalNetConnection: VSS -pin VSS -inst * -type pgpin -all
+
+################################################################################
+#  NetProperties: <net_name> [-special] [-def_prop {int|dbl|str} <value>]...   #
+################################################################################

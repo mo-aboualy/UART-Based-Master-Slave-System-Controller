@@ -1,0 +1,456 @@
+Checking out Encounter license ...
+SOC_Encounter_GXL 8.1 license checkout succeeded.
+This Encounter release has been compiled with OA version 22.04-p032.
+sourcing /usr/Cadence/SOC/etc/fe/rdaDSL.tcl
+*******************************************************************
+*   Copyright (c)  Cadence Design Systems, Inc.  1996 - 2008.     *
+*                     All rights reserved.                        *
+*                                                                 *
+*                                                                 *
+*                                                                 *
+* This program contains confidential and trade secret information *
+* of Cadence Design Systems, Inc. and is protected by copyright   *
+* law and international treaties.  Any reproduction, use,         *
+* distribution or disclosure of this program or any portion of it,*
+* or any attempt to obtain a human-readable version of this       *
+* program, without the express, prior written consent of          *
+* Cadence Design Systems, Inc., is strictly prohibited.           *
+*                                                                 *
+*                 Cadence Design Systems, Inc.                    *
+*                    2655 Seely Avenue                            *
+*                   San Jose, CA 95134,  USA                      *
+*                                                                 *
+*                                                                 *
+*******************************************************************
+
+@(#)CDS: First Encounter v08.10-p004_1 (32bit) 11/04/2008 14:34 (Linux 2.6)
+@(#)CDS: NanoRoute v08.10-p008 NR081027-0018/USR58-UB (database version 2.30, 67.1.1) {superthreading v1.11}
+@(#)CDS: CeltIC v08.10-p002_1 (32bit) 10/23/2008 22:04:14 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CTE v08.10-p016_1 (32bit) Oct 26 2008 15:11:51 (Linux 2.6.9-67.0.10.ELsmp)
+@(#)CDS: CPE v08.10-p009
+--- Starting "First Encounter v08.10-p004_1" on Tue Oct  6 18:49:52 2026 (mem=62.2M) ---
+--- Running on localhost.localdomain (x86_64 w/Linux 2.6.32-431.29.2.el6.x86_64) ---
+This version was compiled on Tue Nov 4 14:34:21 PST 2008.
+Set DBUPerIGU to 1000.
+Set Default Mode Total Cap Scale Factor to 1.00
+Set Detail Mode Total Cap Scale Factor to 1.00
+Set Coupling Total Cap Scale Factor to 1.00
+Set Total Res Scale Factor to 1.00
+Set net toggle Scale Factor to 1.00
+Set Shrink Factor to 1.00000
+<CMD> encMessage warning 0
+Suppress "**WARN ..." messages.
+<CMD> encMessage debug 0
+<CMD> encMessage info 0
+Reading config file - /home/ahesham/Projects/System_pnr/pnr/SYS_TOP.enc.dat/SYS_TOP.conf
+**WARN: (SOCLF-246):	The 'UNITS' attribute should be set
+in the first lef file (technology lef). There is an attempt to set it
+in subsequent lef files which will be ignored.
+**WARN: (SOCLF-46):	Class CORE macro 'SYS_TOP' has no SITE statement defined.
+Class CORE macros require a SITE statement. The SITE FE_CORE_0 was
+created and will be used for this macro, using height 180.6000 that
+matches the macro SIZE height, and width 0.4100 that matches the
+m2 routing pitch. Define the site explicitly in the LEF file, to
+this message in the future.
+**WARN: (SOCSYC-2):	Timing is not defined for cell SYS_TOP.
+*** End library_loading (cpu=0.09min, mem=90.8M, fe_cpu=0.17min, fe_mem=280.6M) ***
+**WARN: (TCLCMD-1013):	The SDC set_operating_conditions assertion is not supported. Please use the Encounter setOpCond command to specify library and operating condition information. Use the setAnalysisMode command to control single vs. bestCase/worstCase vs. on-chip variation timing analysis. (File /home/ahesham/Projects/System_pnr/pnr/../DFT/sdc/SYS_TOP.sdc, Line 9).
+
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (TCLCMD-1068):	One or more of the target pins given with create_clock/create_generated_clock for clock 'ALU_CLK' are hierarchical pins. Tool has mapped these hierarchical pins to their respective flat pin(s). 'report_clocks -clocks' can be used to know the mapped flat pins for given clock. (File /home/ahesham/Projects/System_pnr/pnr/../DFT/sdc/SYS_TOP.sdc, Line 46).
+
+**WARN: (TCLCMD-1068):	One or more of the target pins given with create_clock/create_generated_clock for clock 'RX_CLK' are hierarchical pins. Tool has mapped these hierarchical pins to their respective flat pin(s). 'report_clocks -clocks' can be used to know the mapped flat pins for given clock. (File /home/ahesham/Projects/System_pnr/pnr/../DFT/sdc/SYS_TOP.sdc, Line 49).
+
+**WARN: (TCLCMD-1068):	One or more of the target pins given with create_clock/create_generated_clock for clock 'TX_CLK' are hierarchical pins. Tool has mapped these hierarchical pins to their respective flat pin(s). 'report_clocks -clocks' can be used to know the mapped flat pins for given clock. (File /home/ahesham/Projects/System_pnr/pnr/../DFT/sdc/SYS_TOP.sdc, Line 52).
+
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+Loading preference file /home/ahesham/Projects/System_pnr/pnr/SYS_TOP.enc.dat/enc.pref.tcl ...
+#WARNING (NRIF-64) When droutePostRouteSwapVia is NOT set to 'false' or 'none', the tool just does post route via optimization and it will NOT do normal routing.
+#WARNING (NRDB-21) The number of routing layer 7 in the database does not match with the value of 10 in the Extended Cap Table file.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (SOCCTE-286):	Library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c is not in the min library list.
+**WARN: (SOCCTE-289):	set_driving_cell :  Use the cell in library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c.
+**WARN: (EMS-27):	Message (SOCCTE-286) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+**WARN: (EMS-27):	Message (SOCCTE-289) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+loading place ...
+loading route ...
+<CMD> saveNetlist export/SYS_TOP.v
+Writing Netlist "export/SYS_TOP.v" ...
+<CMD> saveNetlist export/SYS_TOP_pg.v -includePowerGround
+Writing Netlist "export/SYS_TOP_pg.v" ...
+**WARN: (SOCVL-516):	No Power/Ground connections in top module (SYS_TOP).
+Pwr name (VDD).
+Gnd name (VSS).
+1 Pwr names and 1 Gnd names.
+Creating all pg connections for top cell (SYS_TOP).
+<CMD> rcOut -spf export/SYS_TOP.spf
+**ERROR: (SOCDC-495):	Please run RC extraction before invoking RC output command.
+Usage: rcOut {-instance <hierInstanceName> -setportload
+             <fileName> | -setload <fileName>   [-excNetFile
+             <fileName> | -net <fileName>]   [-best
+             | -typical | -worst] | -setres <fileName>
+               [-excNetFile <fileName> | -net <fileName>]
+               [-best | -worst | -typical] | -spef <fileName>
+             [-unmapped]     [-excNetFile <fileName>
+             | -net <fileName> [-addHeaderTail]]   
+              [-best | -worst | -typical] | -spf <fileName>
+             [-excNetFile <fileName> | -net <fileName>
+             [-addHeaderTail]]     [-filesize <sizeInMbytes>]
+             | -verilog <fileName>} [-cUnit <unit>]
+             [-opTemp <temp>] [-view <viewName> | -rc_corner
+             <rcCornerName>]
+
+**ERROR: (SOCSYC-194):	Incorrect usage for command 'rcOut'.
+<CMD> extractRC
+Detail RC Extraction called for design SYS_TOP.
+RC Extraction called in multi-corner(1) mode.
+Process corner(s) are loaded.
+ Corner: RCcorner
+extractDetailRC Option : -outfile ./SYS_TOP_Vdti4Z_10668.rcdb.d  -extended
+RC Mode: Detail [Extended CapTable, RC Table Resistances]
+      RC Corner Indexes            0   
+Capacitance Scaling Factor   : 1.00000 
+Coupling Cap. Scaling Factor : 1.00000 
+Resistance Scaling Factor    : 1.00000 
+Shrink Factor                : 1.00000
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Checking LVS Completed (CPU Time= 0:00:00.0  MEM= 303.4M)
+Creating parasitic data file './SYS_TOP_Vdti4Z_10668.rcdb.d/header.da' in memory efficient access mode for storing RC.
+Write RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+Extracted 10.0072% (CPU Time= 0:00:00.0  MEM= 310.1M)
+Extracted 20.006% (CPU Time= 0:00:00.0  MEM= 312.9M)
+Extracted 30.0047% (CPU Time= 0:00:00.0  MEM= 313.2M)
+Extracted 40.0077% (CPU Time= 0:00:00.0  MEM= 313.2M)
+Extracted 50.0064% (CPU Time= 0:00:00.0  MEM= 313.2M)
+Extracted 60.0051% (CPU Time= 0:00:00.0  MEM= 313.2M)
+Extracted 70.0081% (CPU Time= 0:00:00.1  MEM= 313.2M)
+Extracted 80.0068% (CPU Time= 0:00:00.1  MEM= 313.2M)
+Extracted 90.0055% (CPU Time= 0:00:00.1  MEM= 313.2M)
+Extracted 100% (CPU Time= 0:00:00.1  MEM= 313.3M)
+Nr. Extracted Resistors     : 45082
+Nr. Extracted Ground Cap.   : 47744
+Nr. Extracted Coupling Cap. : 0
+Detail RC Extraction DONE (CPU Time: 0:00:00.1  Real Time: 0:00:00.0  MEM: 303.285M)
+<CMD> saveNetlist export/SYS_TOP.v
+Writing Netlist "export/SYS_TOP.v" ...
+<CMD> saveNetlist export/SYS_TOP_pg.v -includePowerGround
+Writing Netlist "export/SYS_TOP_pg.v" ...
+**WARN: (SOCVL-516):	No Power/Ground connections in top module (SYS_TOP).
+Pwr name (VDD).
+Gnd name (VSS).
+1 Pwr names and 1 Gnd names.
+Creating all pg connections for top cell (SYS_TOP).
+<CMD> rcOut -spf export/SYS_TOP.spf
+Opening parasitic data file './SYS_TOP_Vdti4Z_10668.rcdb.d' for reading.
+Read RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+RC Out has the following PVT Info:
+   RC:RCcorner
+Printing *|NET...
+Detail RC Out Completed (CPU Time= 0:00:00.1  MEM= 303.3M)
+Closing parasitic data file './SYS_TOP_Vdti4Z_10668.rcdb.d'. 2678 times net's RC data read were performed.
+<CMD> delayCal -sdf export/SYS_TOP.sdf -version 3.0
+delayCal Option :  -sdf export/SYS_TOP.sdf -version 3.0 
+delayCal Mode   : 'setDelayCalMode -engine default -signOff false -ecsmType ecsmOnDemand'
+Topological Sorting (CPU = 0:00:00.0, MEM = 312.1M)
+Number of Loop : 0
+Start delay calculation (mem=312.129M)...
+delayCal using detail RC...
+Opening parasitic data file './SYS_TOP_Vdti4Z_10668.rcdb.d' for reading.
+Read RCDB with uncompressed RC data. Compressed RCDB mode disabled.
+RC Database In Completed (CPU Time= 0:00:00.0  MEM= 314.1M)
+Initializing multi-corner capacitance tables ... 
+Initializing multi-corner resistance tables ...
+Handling High Fanin Net......
+Handling 0 High Fanin Net (CPU = 0:00:00.0) 
+
+Printing SDF File.....
+Delay calculation completed.
+(0:00:00.2 317.098M 0)
+
+
+Delay Calculation Summary:
+   Number of nets with pin count greater than 100  : 0
+   Number of nets using excludenet file            : 0
+   Number of nets using set_resistance             : 0
+   Number of nets using default delay              : 0
+   CPU Time (0:00:00.2)
+<CMD> report_power -outfile report/power.rpt
+Start force assigning power rail voltages for view setup1_analysis_view
+Finished assigning power rail voltages
+
+CPE found ground net: VSS
+CPE found power net: VDD  voltage: 1.08V
+Calculate delays in BcWc mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 317.3M)
+Number of Loop : 0
+Start delay calculation (mem=317.297M)...
+delayCal using detail RC...
+Delay calculation completed.
+(0:00:00.1 317.895M 0)
+Calculate delays in BcWc mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 318.1M)
+Number of Loop : 0
+Start delay calculation (mem=318.141M)...
+delayCal using detail RC...
+Delay calculation completed.
+(0:00:00.0 318.141M 0)
+Calculate delays in BcWc mode...
+Topological Sorting (CPU = 0:00:00.0, MEM = 318.1M)
+Number of Loop : 0
+Start delay calculation (mem=318.141M)...
+delayCal using detail RC...
+Delay calculation completed.
+(0:00:00.0 318.141M 0)
+*** CDM Built up (cpu=0:00:00.2  mem= 318.1M) ***
+Start force assigning power rail voltages for view setup1_analysis_view
+Finished assigning power rail voltages
+
+CPE found ground net: VSS
+CPE found power net: VDD  voltage: 1.08V
+INFO (POWER-1606): Found clock 'REF_CLK' with frequency 50MHz from SDC file.
+
+INFO (POWER-1606): Found clock 'ALU_CLK' with frequency 50MHz from SDC file.
+
+INFO (POWER-1606): Found clock 'SCAN_CLK' with frequency 10MHz from SDC file.
+
+INFO (POWER-1606): Found clock 'UART_CLK' with frequency 3.6864MHz from SDC file.
+
+INFO (POWER-1606): Found clock 'RX_CLK' with frequency 3.6864MHz from SDC file.
+
+INFO (POWER-1606): Found clock 'TX_CLK' with frequency 115200Hz from SDC file.
+
+
+Propagating signal activity...
+
+
+Starting Levelizing
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT)
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 5%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 10%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 15%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 20%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 25%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 30%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 35%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 40%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 45%
+2026-Oct-06 18:56:29 (2026-Oct-06 16:56:29 GMT): 50%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 55%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 60%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 65%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 70%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 75%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 80%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 85%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 90%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 95%
+
+Finished Levelizing
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT)
+
+Starting Activity Propagation
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT)
+INFO (POWER-1356):   No default input activity has been set.  Defaulting to 0.2.
+
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 5%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 10%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 15%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 20%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 25%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 30%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 35%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 40%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 45%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 50%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 55%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 60%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 65%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 70%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 75%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 80%
+
+Finished Activity Propagation
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT)
+WARNING (POWER-1500): 2 cell(s) in the design have timing library models but
+do not have internal power data.  Internal power will not be calculated for these cells:
+
+  TIEHIM
+  TIELOM
+WARNING (POWER-1501): 2 cell(s) in the design have timing library models but
+do not have leakage power data.  Leakage power will not be calculated for these cells:
+
+  TIEHIM
+  TIELOM
+
+Starting Calculating power
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT)
+
+Calculating power dissipation...
+
+ ... Calculating switching power
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 5%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 10%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 15%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 20%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 25%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 30%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 35%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 40%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 45%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 50%
+ ... Calculating internal and leakage power
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 55%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 60%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 65%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 70%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 75%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 80%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 85%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 90%
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT): 95%
+
+Finished Calculating power
+2026-Oct-06 18:56:30 (2026-Oct-06 16:56:30 GMT)
+WARNING (POWER-1216): The total clock network power in the report may be higher than the actual total clock network power in the design.
+Instances that are part of multiple clock networks may be counted multiple times in this total.
+
+report_power consumed time 00:00:01 : increased peak memory (499M) by 2
+Output file is report/power.rpt.
+<CMD> streamOut export/SYS_TOP.gds -mapFile ./import/gds2InLayer.map -libName DesignLib -stripes 1 -units 2000 -mode ALL
+Parse map file...
+**ERROR: (SOCOGDS-1556):	 Line 1: Incorrect map ;Avanti!Layer GDS2Layer[:GDS2DataType]
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 3: Incorrect map 1:0    1:0       ; DNW        Converts GDS2 layer 01     to Apollo layer 01
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 4: Incorrect map 3:0    3:0       ; NWELL      Converts GDS2 layer 03     to Apollo layer 03
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 5: Incorrect map 6:0    6:0       ; DIFF       Converts GDS2 layer 06     to Apollo layer 06
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 6: Incorrect map 15:0  15:0       ; OD2        Converts GDS2 layer 15     to Apollo layer 15
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 7: Incorrect map 17:0  17:0       ; POLY1      Converts GDS2 layer 17     to Apollo layer 17
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 8: Incorrect map 25:0  25:0       ; PIMP       Converts GDS2 layer 25     to Apollo layer 25
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 9: Incorrect map 26:0  26:0       ; NIMP       Converts GDS2 layer 26     to Apollo layer 26
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 10: Incorrect map 30:0  30:0       ; CONT       Converts GDS2 layer 30     to Apollo layer 30
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 11: Incorrect map 31:0  31:0       ; METAL1     Converts GDS2 layer 31     to Apollo layer 31
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 12: Incorrect map 131:0 131:0      ; METAL1 txt Converts GDS2 layer 131    to Apollo layer 131
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 13: Incorrect map 51:0  51:0       ; VIA12      Converts GDS2 layer 51     to Apollo layer 51
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 14: Incorrect map 32:0  32:0       ; METAL2     Converts GDS2 layer 32     to Apollo layer 32
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 15: Incorrect map 132:0 132:0      ; METAL2 txt Converts GDS2 layer 132    to Apollo layer 132
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 16: Incorrect map 52:0  52:0       ; VIA23      Converts GDS2 layer 52     to Apollo layer 52
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 17: Incorrect map 33:0  33:0       ; METAL3     Converts GDS2 layer 33     to Apollo layer 33
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 18: Incorrect map 133:0 133:0      ; METAL3 txt Converts GDS2 layer 133    to Apollo layer 133
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 19: Incorrect map 53:0  53:0       ; VIA34      Converts GDS2 layer 53     to Apollo layer 53
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 20: Incorrect map 34:0  34:0       ; METAL4     Converts GDS2 layer 34     to Apollo layer 34
+....check the number of fields on this line
+**ERROR: (SOCOGDS-1556):	 Line 21: Incorrect map 134:0 134:0      ; METAL4 txt Converts GDS2 layer 134    to Apollo layer 134
+....check the number of fields on this line
+**WARN: (EMS-27):	Message (SOCOGDS-1556) has exceeded the current message display limit of 20.
+To increase the message display limit, refer to the product command reference manual.
+Writing GDSII file ...
+	****** db unit per micron = 2000 ******
+	****** output gds2 file unit per micron = 2000 ******
+	****** unit scaling factor = 1 ******
+Output for instance
+Output for bump
+Output for tile
+Output for via structure generation
+Statistics for GDS generated (version 3)
+----------------------------------------
+Stream Out Layer Mapping Information:
+GDS Layer Number          GDS Layer Name
+----------------------------------------
+
+
+Stream Out Information Processed for GDS version 3:
+Units: 2000 DBU
+
+Object                             Count
+----------------------------------------
+Instances                           3115
+
+Ports/Pins                             0
+
+Nets                                   0
+
+    Via Instances                      0
+
+Special Nets                           0
+
+    Via Instances                      0
+
+Metal Fills                            0
+
+    Via Instances                      0
+
+Metal FillOPCs                         0
+
+    Via Instances                      0
+
+Text                                   0
+
+
+Blockages                              0
+
+
+Custom Text                            0
+
+
+Custom Box                             0
+
+######Streamout is finished!
+
+*** Memory Usage v0.144 (Current mem = 319.566M, initial mem = 62.238M) ***
+--- Ending "First Encounter" (totcpu=0:01:31, real=0:07:37, mem=319.6M) ---

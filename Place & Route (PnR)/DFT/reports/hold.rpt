@@ -1,0 +1,83 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : SYS_TOP
+Version: O-2018.06-SP1
+Date   : Tue Oct  6 23:23:16 2026
+****************************************
+
+Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
+Wire Load Model Mode: top
+
+  Startpoint: ALU/u1/arith_out_reg[8]
+              (rising edge-triggered flip-flop clocked by ALU_CLK)
+  Endpoint: ALU/u1/arith_out_reg[9]
+            (rising edge-triggered flip-flop clocked by ALU_CLK)
+  Path Group: ALU_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SYS_TOP            tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock ALU_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  ALU/u1/arith_out_reg[8]/CK (SDFFRQX1M)                  0.00       0.00 r
+  ALU/u1/arith_out_reg[8]/Q (SDFFRQX1M)                   0.84       0.84 r
+  ALU/u1/arith_out_reg[9]/SI (SDFFRQX1M)                  0.00       0.84 r
+  data arrival time                                                  0.84
+
+  clock ALU_CLK (rise edge)                               0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  ALU/u1/arith_out_reg[9]/CK (SDFFRQX1M)                  0.00       0.10 r
+  library hold time                                      -0.28      -0.18
+  data required time                                                -0.18
+  --------------------------------------------------------------------------
+  data required time                                                -0.18
+  data arrival time                                                 -0.84
+  --------------------------------------------------------------------------
+  slack (MET)                                                        1.01
+
+
+  Startpoint: SYS_CTRL/store_func_reg[3]
+              (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Endpoint: TX_Clock_Divider/clk_div_reg_reg
+            (rising edge-triggered flip-flop clocked by SCAN_CLK)
+  Path Group: SCAN_CLK
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  SYS_TOP            tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  SYS_CTRL/store_func_reg[3]/CK (SDFFRX1M)                0.00       0.00 r
+  SYS_CTRL/store_func_reg[3]/Q (SDFFRX1M)                 0.64       0.64 r
+  SYS_CTRL/test_so (System_Controller_test_1)             0.00       0.64 r
+  TX_Clock_Divider/test_si (Clock_Divider_test_1)         0.00       0.64 r
+  TX_Clock_Divider/clk_div_reg_reg/SI (SDFFRQX1M)         0.00       0.64 r
+  data arrival time                                                  0.64
+
+  clock SCAN_CLK (rise edge)                              0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  clock uncertainty                                       0.10       0.10
+  TX_Clock_Divider/clk_div_reg_reg/CK (SDFFRQX1M)         0.00       0.10 r
+  library hold time                                      -0.24      -0.14
+  data required time                                                -0.14
+  --------------------------------------------------------------------------
+  data required time                                                -0.14
+  data arrival time                                                 -0.64
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.79
+
+
+1

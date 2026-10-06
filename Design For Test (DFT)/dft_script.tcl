@@ -1,7 +1,6 @@
-
 ########################### Define Top Module ############################
                                                    
-set top_module System_TOP_DFT
+set top_module SYS_TOP
 
 ##################### Define Working Library Directory ######################
                                                    
@@ -135,6 +134,7 @@ compile -scan -incremental
 
 dft_drc -verbose -coverage_estimate
 
+set_svf -off
 #############################################################################
 # Write out files
 #############################################################################

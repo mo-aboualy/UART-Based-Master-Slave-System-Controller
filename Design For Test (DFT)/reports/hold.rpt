@@ -4,9 +4,9 @@ Report : timing
         -path full
         -delay min
         -max_paths 1
-Design : System_TOP_DFT
+Design : SYS_TOP
 Version: O-2018.06-SP1
-Date   : Wed Sep 30 04:40:33 2026
+Date   : Wed Oct  7 02:46:14 2026
 ****************************************
 
 Operating Conditions: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c   Library: scmetro_tsmc_cl013g_rvt_ff_1p32v_m40c
@@ -21,7 +21,7 @@ Wire Load Model Mode: top
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  System_TOP_DFT     tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+  SYS_TOP            tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
@@ -45,37 +45,39 @@ Wire Load Model Mode: top
   slack (MET)                                                        1.01
 
 
-  Startpoint: Register_File/RD_Valid_reg
+  Startpoint: SYS_CTRL/store_func_reg[3]
               (rising edge-triggered flip-flop clocked by SCAN_CLK)
-  Endpoint: Register_File/reg_file_reg[0][0]
+  Endpoint: TX_Clock_Divider/clk_div_reg_reg
             (rising edge-triggered flip-flop clocked by SCAN_CLK)
   Path Group: SCAN_CLK
   Path Type: min
 
   Des/Clust/Port     Wire Load Model       Library
   ------------------------------------------------
-  System_TOP_DFT     tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
+  SYS_TOP            tsmc13_wl30           scmetro_tsmc_cl013g_rvt_ss_1p08v_125c
 
   Point                                                   Incr       Path
   --------------------------------------------------------------------------
   clock SCAN_CLK (rise edge)                              0.00       0.00
   clock network delay (ideal)                             0.00       0.00
-  Register_File/RD_Valid_reg/CK (SDFFRQX2M)               0.00       0.00 r
-  Register_File/RD_Valid_reg/Q (SDFFRQX2M)                0.69       0.69 r
-  Register_File/reg_file_reg[0][0]/SI (SDFFRHQX8M)        0.00       0.69 r
-  data arrival time                                                  0.69
+  SYS_CTRL/store_func_reg[3]/CK (SDFFRX1M)                0.00       0.00 r
+  SYS_CTRL/store_func_reg[3]/Q (SDFFRX1M)                 0.64       0.64 r
+  SYS_CTRL/test_so (System_Controller_test_1)             0.00       0.64 r
+  TX_Clock_Divider/test_si (Clock_Divider_test_1)         0.00       0.64 r
+  TX_Clock_Divider/clk_div_reg_reg/SI (SDFFRQX1M)         0.00       0.64 r
+  data arrival time                                                  0.64
 
   clock SCAN_CLK (rise edge)                              0.00       0.00
   clock network delay (ideal)                             0.00       0.00
   clock uncertainty                                       0.10       0.10
-  Register_File/reg_file_reg[0][0]/CK (SDFFRHQX8M)        0.00       0.10 r
-  library hold time                                      -0.18      -0.08
-  data required time                                                -0.08
+  TX_Clock_Divider/clk_div_reg_reg/CK (SDFFRQX1M)         0.00       0.10 r
+  library hold time                                      -0.24      -0.14
+  data required time                                                -0.14
   --------------------------------------------------------------------------
-  data required time                                                -0.08
-  data arrival time                                                 -0.69
+  data required time                                                -0.14
+  data arrival time                                                 -0.64
   --------------------------------------------------------------------------
-  slack (MET)                                                        0.77
+  slack (MET)                                                        0.79
 
 
 1

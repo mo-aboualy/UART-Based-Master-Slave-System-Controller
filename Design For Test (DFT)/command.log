@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version O-2018.06-SP1 for linux64 -- Jul 19, 2018
-#@ # Date:   Wed Sep 30 04:40:15 2026
+#@ # Date:   Wed Oct  7 02:45:52 2026
 #@ # Run by: ICer@IC_EDA
 #@ 
 
@@ -6627,10 +6627,9 @@ source /home/synopsys/syn/O-2018.06-SP1/admin/setup/.synopsys_dc.setup
 source -echo -verbose /home/ICer/Final_System/DFT/dft_script.tcl
 #@ # -- Starting source /home/ICer/Final_System/DFT/dft_script.tcl
 
-#@ 
 #@ ########################### Define Top Module ############################
 #@ 
-#@ set top_module System_TOP_DFT
+#@ set top_module SYS_TOP
 #@ 
 #@ ##################### Define Working Library Directory ######################
 #@ 
@@ -6824,13 +6823,13 @@ source -echo -verbose /home/ICer/Final_System/DFT/dft_script.tcl
 #@ #########################################################
 #@ ####################################################################################
 #@ 
-#@ set_input_delay $INPUT_DELAY -clock RX_CLK [get_ports RX_IN]
+#@ set_input_delay $INPUT_DELAY -clock RX_CLK [get_ports UART_RX_IN]
 #@ 
 #@ set_input_delay $SCAN_INPUT_DELAY -clock SCAN_CLK [get_ports {SI* SE}]
 #@ 
-#@ set_output_delay $OUTPUT_DELAY -clock TX_CLK [get_ports TX_OUT]
+#@ set_output_delay $OUTPUT_DELAY -clock TX_CLK [get_ports UART_TX_O]
 #@ 
-#@ set_output_delay $OUTPUT_DELAY -clock RX_CLK [get_ports {PAR_err STOP_err}]
+#@ set_output_delay $OUTPUT_DELAY -clock RX_CLK [get_ports {parity_error framing_error}]
 #@ 
 #@ set_output_delay $SCAN_OUTPUT_DELAY -clock SCAN_CLK [get_ports SO*]
 #@ 
@@ -6840,7 +6839,7 @@ source -echo -verbose /home/ICer/Final_System/DFT/dft_script.tcl
 #@ #########################################################
 #@ ####################################################################################
 #@ 
-#@ set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports RX_IN]
+#@ set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports UART_RX_IN]
 #@ 
 #@ set_driving_cell -library scmetro_tsmc_cl013g_rvt_ss_1p08v_125c -lib_cell BUFX2M -pin Y [get_ports {SI* SE}]
 #@ 
@@ -6850,7 +6849,7 @@ source -echo -verbose /home/ICer/Final_System/DFT/dft_script.tcl
 #@ #########################################################
 #@ ####################################################################################
 #@ 
-#@ set_load $OUTPUT_LOAD [get_ports {TX_OUT PAR_err STOP_err}]
+#@ set_load $OUTPUT_LOAD [get_ports {UART_TX_O parity_error framing_error}]
 #@ 
 #@ set_load $OUTPUT_LOAD [get_ports SO*]
 #@ 
@@ -6954,6 +6953,7 @@ source -echo -verbose /home/ICer/Final_System/DFT/dft_script.tcl
 #@ 
 #@ dft_drc -verbose -coverage_estimate
 #@ 
+#@ set_svf -off
 #@ #############################################################################
 #@ # Write out files
 #@ #############################################################################
