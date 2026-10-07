@@ -141,6 +141,61 @@ The top-level testbench (`System_TOP_tb.v`) is self-checking and follows the seq
 
 To run in ModelSim/Questa, fill in the module and wave-file names in `Testbenches/run.do.txt` and execute it. It compiles the files listed in `Testbenches/sourcefile.txt`.
 
+### Simulation results
+
+Console output of the top-level testbench (all 10 checks pass):
+
+```
+==================================================
+ System_TOP testbench
+==================================================
+
+[ Configuration ]
+[  342.1 us] PASS  UART_Config  REG[0x2] = 0x81
+[  681.4 us] PASS  Div_Ratio    REG[0x3] = 0x20
+
+[ Register File write ]
+[ 1020.8 us] PASS  RF write     REG[0x5] = 0xa5
+
+[ Register File read ]
+[ 1351.2 us] PASS  RF read      REG[0x5] = 0xa5
+
+[ ALU operation with operands ]
+[ 1577.2 us] PASS  OP_A stored  REG[0x0] = 0x64
+[ 1690.3 us] PASS  OP_B stored  REG[0x1] = 0x0a
+[ 2003.0 us] PASS  ALU MUL       A=100 B=10 -> 0x03e8
+
+[ ALU operation without operands ]
+[ 2428.7 us] PASS  ALU OR        A=100 B=10 -> 0x006e
+
+[ Frame integrity ]
+           PASS  RX flags PAR_err / STOP_err stayed low
+           PASS  TX frames: parity and stop bits correct
+
+==================================================
+ Checks: 10   Passed: 10   Failed: 0
+ ALL TESTS PASSED
+==================================================
+```
+
+The waveforms below show the master's frames on `RX_IN`, the system controller state, the register file and ALU interfaces, and the responses on `TX_OUT`.
+
+**1. Configuration and register write (90 to 1110 us).** Three write commands, each `0xAA`, address, data: `0xAA 0x02 0x81` (UART config), `0xAA 0x03 0x20` (division ratio) and `0xAA 0x05 0xA5` (general-purpose register 5). The controller goes `WR_ADDR`, `WR_DATA`, `IDLE` for each, and `WR_en` pulses once per command with the latched address.
+
+![Configuration and register write](docs/sim_1_config_and_write.png)
+
+**2. Register read (1100 to 1400 us).** `0xBB 0x05` reads register 5. `RD_Data` returns `0xA5`, `W_inc` pushes it into the FIFO, and the response frame starts on `TX_OUT`.
+
+![Register read](docs/sim_2_register_read.png)
+
+**3. ALU operation with operands (1420 us to 2 ms).** `0xCC 0x64 0x0A 0x02`: operand A (100) goes to REG0, operand B (10) to REG1, then function `0x02` (multiply). `CLK_en` turns the ALU clock on, `ALU_Valid` rises, and `ALU_OUT` settles at `0x03E8` (1000), which is sent back as two bytes.
+
+![ALU operation with operands](docs/sim_3_alu_with_operands.png)
+
+**4. ALU operation without operands (2080 to 2450 us).** `0xDD 0x05`: the controller reuses the operands already in REG0 and REG1 and applies function `0x05` (OR). `CLK_en` gates the ALU clock on for the operation, and the 2-byte response follows on `TX_OUT`.
+
+![ALU operation without operands](docs/sim_4_alu_without_operands.png)
+
 ---
 
 ## Implementation flow and results
@@ -200,6 +255,10 @@ The critical path is register file to ALU on the gated clock. Power figures use 
 | Hold slack | 1.01 ns (`ALU_CLK`), 0.79 ns (`SCAN_CLK`) |
 
 Clock and reset muxing for test mode is built into the scan-ready top level `SYS_TOP.v` using `RTL/DFT MUX/mux2X1.v`: in test mode both the clocks and the reset are driven from `scan_clk` and `scan_rst`.
+
+Post-DFT schematic of `SYS_TOP` (Design Vision), showing the top-level blocks together with the scan clock and scan reset muxes:
+
+![Post-DFT schematic of SYS_TOP](docs/Post_DFT_schematic.png)
 
 ### Place and route (SoC Encounter)
 
@@ -287,7 +346,7 @@ Compare points: 3 ports, 365 flip-flops and 1 latch after synthesis (the clock-g
 │   ├── Formality Post Synthesis/ RTL vs. synthesized netlist
 │   ├── Formality Post DFT/       RTL with DFT muxes vs. scan netlist
 │   └── Formality Post PnR/       RTL with DFT muxes vs. routed netlist
-└── docs/                         Block diagram and PnR screenshots
+└── docs/                         Block diagram, simulation waveforms, post-DFT schematic, PnR screenshots
 ```
 
 ---
