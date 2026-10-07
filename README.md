@@ -1,13 +1,13 @@
 # UART-Based Master-Slave System Controller
 
-A multi-clock-domain digital system that receives commands over UART, executes them on a register file or a signed ALU, and sends the result back over UART. The design is taken through the complete RTL-to-DFT flow on a TSMC 0.13 µm standard-cell library: lint, CDC/RDC sign-off, synthesis, scan insertion, and formal equivalence checking after each netlist transformation.
+A multi-clock-domain digital system that receives commands over UART, executes them on a register file or a signed ALU, and sends the result back over UART. The design is taken through the complete RTL-to-GDSII flow on a TSMC 0.13 µm standard-cell library: lint, CDC/RDC sign-off, synthesis, scan insertion, place and route, and formal equivalence checking after every netlist transformation.
 
 | | |
 |---|---|
 | **Clocks** | `REF_CLK` 50 MHz, `UART_CLK` 3.6864 MHz (asynchronous to each other) |
 | **Default UART** | 115200 baud, 8 data bits, even parity enabled, 1 stop bit |
 | **Technology** | TSMC 0.13 µm (`scmetro_tsmc_cl013g`, RVT), SS / TT / FF corners |
-| **Flow** | ModelSim/Questa, SpyGlass, Design Compiler (O-2018.06-SP1), Formality |
+| **Flow** | ModelSim/Questa, SpyGlass, Design Compiler (O-2018.06-SP1), Formality, Cadence SoC Encounter 8.1 |
 
 ---
 
@@ -145,7 +145,7 @@ To run in ModelSim/Questa, fill in the module and wave-file names in `Testbenche
 
 ## Implementation flow and results
 
-Flow: **RTL, then lint and CDC (SpyGlass), then synthesis (Design Compiler), then DFT scan insertion, with Formality equivalence checks after synthesis and after DFT.**
+Flow: **RTL, then lint and CDC (SpyGlass), then synthesis (Design Compiler), then DFT scan insertion, then place and route (SoC Encounter), with Formality equivalence checks after synthesis, after DFT, and after place and route.**
 
 Synthesis constraints: `REF_CLK` 20 ns, `UART_CLK` 271.27 ns, setup uncertainty 0.2 ns, hold uncertainty 0.1 ns, input and output delays at 20% of the clock period. `REF_CLK`/`ALU_CLK` and `UART_CLK`/`RX_CLK`/`TX_CLK` are declared asynchronous clock groups. Generated clocks: `ALU_CLK` (gated), `RX_CLK` (/1), `TX_CLK` (/32).
 
@@ -190,24 +190,65 @@ The critical path is register file to ALU on the gated clock. Power figures use 
 
 | Metric | Value |
 |---|---|
-| Scan style | Full scan, multiplexed flip-flop |
-| Scan chains | 4 (92 / 91 / 91 / 91 cells), 365 scan cells |
-| Scan ports | `SI[2:0]`, `SO[2:0]`, `SE`, `test_mode`, `scan_clk`, `scan_rst` |
-| **Estimated test coverage** | **99.47%** |
-| DRC | 1 warning (TEST-505) on the clock-gating latch, whose enable is forced on in test mode; the other 365 sequential cells are valid scan cells |
-| Area after scan | 30,772 µm² (+19.8% over synthesis) |
-| Power after scan | 0.518 mW |
+| Scan style | Full scan, multiplexed flip-flop, no clock mixing |
+| Scan chains | 4 (94 / 94 / 93 / 93 cells), 374 scan cells |
+| Scan ports | `SI[3:0]`, `SO[3:0]`, `SE`, `test_mode`, `scan_clk`, `scan_rst` |
+| **Estimated test coverage** | **99.53%** |
+| Cells / area after scan | 2,710 cells, 31,125 µm² (+21.2% over synthesis) |
+| Power after scan | 0.516 mW (SS corner) |
+| Setup slack | 18.44 ns (`ALU_CLK`), 68.79 ns (`SCAN_CLK`) |
+| Hold slack | 1.01 ns (`ALU_CLK`), 0.79 ns (`SCAN_CLK`) |
 
-Clock and reset muxing for test mode is built into `System_TOP_DFT.v`.
+Clock and reset muxing for test mode is built into the scan-ready top level `SYS_TOP.v` using `RTL/DFT MUX/mux2X1.v`: in test mode both the clocks and the reset are driven from `scan_clk` and `scan_rst`.
+
+### Place and route (SoC Encounter)
+
+The scan netlist from the DFT step is placed and routed with three constraint modes (functional, scan, capture) with setup checked at the slow corner (SS, 1.08 V, 125 C) and hold at the fast corner (FF, 1.32 V, -40 C), which gives six analysis views.
+
+| Step | Script | Setup |
+|---|---|---|
+| Import | `des_import.tcl`, `import/MMMC.tcl` | TSMC 0.13 µm LEF/captables, 3 libraries, 6 analysis views |
+| Floorplan | `floorplan.tcl` | 240.47 x 160.47 µm die, 6 µm core-to-die margin |
+| Placement | `placement.tcl` | `placeDesign` with in-place and pre-place optimization, tie cells, power-net connection |
+| Clock tree synthesis | `cts.tcl` | `clockDesign` from `Clock.ctstch`, reports in `clock_report/` |
+| Routing | `routing.tcl` | NanoRoute global and detail routing with via and wire optimization, up to metal 6 |
+| Finishing | `chip_finish.tcl` | Filler insertion (`FILL1M` to `FILL64M`, 552 filler cells) |
+| Outputs | `outputs_gen.tcl` | GDS, netlist (with and without power pins), SDF, SPF in `pnr/export/` |
+
+**Placement by module**
+
+![Placed design colored by module](docs/PnR_module_placement.png)
+
+**Final routed layout**
+
+![Routed layout in SoC Encounter](docs/PnR_routed_layout.png)
+
+Post-route results:
+
+| Metric | Value |
+|---|---|
+| Setup WNS / TNS | **3.431 ns / 0.000 ns**, 0 violating paths out of 1,062 |
+| Hold WNS / TNS | **0.019 ns / 0.000 ns**, 0 violating paths |
+| Design rule violations (max cap / max transition / max fanout) | 0 / 0 / 0 |
+| Geometry (DRC) | No violations found |
+| Connectivity | No problems or warnings |
+| Process antenna | No violations found |
+| Cell density | 93.4% before filler insertion, 98.53% after |
+| Total power (SS, 1.08 V) | 0.856 mW (internal 0.566, switching 0.268, leakage 0.022) |
+
+Setup WNS by path group: register-to-register 3.431 ns, input-to-register 15.412 ns, register-to-output 77.152 ns, clock gating 17.639 ns. Hold WNS by path group: register-to-register 0.019 ns, input-to-register 0.113 ns, register-to-output 4.366 ns, clock gating 0.520 ns.
+
+Clock tree: 14 subtrees, 372 sinks, 76 clock buffers, 18 levels. Skew is 229 ps in the setup views and 89.4 ps in the hold views against a 200 ps target, so the setup views are slightly over the CTS skew target, but timing still closes after routing. Power uses a 0.2 primary-input activity and no annotated switching activity.
 
 ### Formal equivalence (Formality)
 
 | Comparison | Compare points | Passing | Failing | Aborted / unverified | Result |
 |---|---|---|---|---|---|
 | RTL vs. post-synthesis netlist | 369 | 369 | 0 | 0 | **Verification SUCCEEDED** |
-| post-DFT insertion RTL vs. post-DFT netlist | 369 | 369 | 0 | 0 | **Verification SUCCEEDED** |
+| RTL with DFT muxes vs. post-DFT netlist | 378 | 378 | 0 | 0 | **Verification SUCCEEDED** |
+| RTL with DFT muxes vs. post-route netlist | 378 | 378 | 0 | 0 | **Verification SUCCEEDED** |
 
-Compare points: 3 ports, 365 flip-flops, 1 latch (the clock-gating latch).
+Compare points: 3 ports, 365 flip-flops and 1 latch after synthesis (the clock-gating latch); 3 ports, 374 flip-flops and 1 latch after DFT and after place and route. For the DFT and place-and-route comparisons `test_mode` and `SE` are held at 0 and the scan data ports `SI` / `SO` are excluded, since they do not exist in the functional RTL.
 
 ---
 
@@ -227,6 +268,7 @@ Compare points: 3 ports, 365 flip-flops, 1 latch (the clock-gating latch).
 │   ├── Asynchronous FIFO/        ASYC_FIFO, FIFO_WR, FIFO_RD, FIFO_MEM_CONTROL, DF_SYNC
 │   ├── Clock Divider/            Clock_Divider.v
 │   ├── Clock Gating/             Clock_Gating.v
+│   ├── DFT MUX/                  mux2X1.v (scan clock / scan reset mux)
 │   ├── Prescale MUX/             Prescale_MUX.v
 │   ├── Pulse Generator/          Pulse_Generator.v
 │   ├── Data Synchronizer/        Data_Sync.v
@@ -236,9 +278,16 @@ Compare points: 3 ports, 365 flip-flops, 1 latch (the clock-gating latch).
 │   ├── LINT/                     RTL lint reports
 │   └── CDC/                      CDC, RDC, setup, clock/reset integrity, abstract views
 ├── Synthesis/syn/                Design Compiler scripts, constraints, netlist, SDC/SDF, reports
-├── Design For Test (DFT)/        Scan insertion script, scan netlist, SDC/SDF, reports
-├── Formality Post Synthesis/     RTL vs. synthesized netlist
-└── Formality Post DFT/           Synthesized vs. scan netlist
+├── Design For Test (DFT)/        Scan insertion script, scan-ready SYS_TOP.v, scan netlist, SDC/SDF, reports
+├── Place & Route (PnR)/
+│   ├── DFT/                      Scan netlist and SDC/SDF used as the PnR input
+│   ├── pnr/                      Encounter scripts, timing / clock / power reports, exported GDS, netlist, SDF
+│   └── std_cells/                Libraries, LEF and capacitance tables
+├── Formal Verfication/
+│   ├── Formality Post Synthesis/ RTL vs. synthesized netlist
+│   ├── Formality Post DFT/       RTL with DFT muxes vs. scan netlist
+│   └── Formality Post PnR/       RTL with DFT muxes vs. routed netlist
+└── docs/                         Block diagram and PnR screenshots
 ```
 
 ---
@@ -252,8 +301,10 @@ Each implementation stage has its own launcher and Tcl script.
 | Simulation | `vsim -do run.do` from `Testbenches/` (after editing `run.do.txt` for your testbench) |
 | Synthesis | `cd Synthesis/syn && ./run_syn.sh` |
 | DFT | `cd "Design For Test (DFT)" && ./run_dft.sh` |
-| Formality (post-synthesis) | `cd "Formality Post Synthesis" && ./run_syn_fm.sh` |
-| Formality (post-DFT) | `cd "Formality Post DFT" && ./run_dft_fm.sh` |
+| Place and route | In `Place & Route (PnR)/pnr`, run the stage scripts in order: `des_import.tcl`, `floorplan.tcl`, `placement.tcl`, `cts.tcl`, `routing.tcl`, `chip_finish.tcl`, `outputs_gen.tcl` |
+| Formality (post-synthesis) | `cd "Formal Verfication/Formality Post Synthesis" && ./run_syn_fm.sh` |
+| Formality (post-DFT) | `cd "Formal Verfication/Formality Post DFT" && ./run_dft_fm.sh` |
+| Formality (post-PnR) | `cd "Formal Verfication/Formality Post PnR" && ./run_pnr_fm.sh` |
 | CDC / lint | Open `Linting & CDC/CDC/Final_System_CDC.prj` in SpyGlass |
 
 The scripts reference the standard-cell libraries under `/home/ICer/Final_System/std_cells/`; adjust `search_path` in the Tcl scripts for your environment.
